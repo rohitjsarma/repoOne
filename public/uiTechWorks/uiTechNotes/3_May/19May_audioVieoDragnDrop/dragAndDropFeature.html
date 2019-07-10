@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>
+			Demonstrating HTML5 Drag and drop events.
+		</title>
+		<style type="text/css">
+			img {
+				width: 100px;
+				height: 120px;
+				border: 1px solid;
+			}
+			#container {
+				width: 300px;
+				height: 400px;
+				border: 1px solid;
+				background: #ccc;
+				margin: 10px;
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container" ondrop="onDrop(event)" ondragover="onDragOver(event)"> 
+		</div>
+		<img src="images/laptop.jpg" draggable="true" ondragstart="onDragStart(event)" id="prodImg"/>
+		<script type="text/javascript">
+		var imageid = '';
+			function onDragOver(event) {
+				event.preventDefault();
+				
+			}
+
+			function onDragStart(event) {
+				console.log(event);
+				console.log("Drag started");
+				imageid = event.target.getAttribute("id");
+			}
+
+			function onDrop(event) {
+				event.preventDefault();
+				console.log(event);
+				var imgSrc = document.querySelector("#" + imageid).getAttribute('src');
+
+				var imgTag = document.createElement("img");
+				imgTag.setAttribute("src",imgSrc );
+				event.target.appendChild(imgTag);
+
+				
+			}
+		</script>
+	</body>
+</html>

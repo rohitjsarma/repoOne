@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<title>
+			Demonstrating html5 web workers
+		</title>
+		<style type="text/css">
+			header {
+				text-align: right;
+				border: 1px solid;
+				margin: 5px;
+				padding: 5px;
+			}
+			.mainContainer {
+				max-height: 500px;
+				border: 1px solid;
+				overflow: auto;
+			}
+			.block {
+				border: 1px solid;
+				background: #ccc;
+				padding: 5px;
+				margin: 5px;
+				text-align: c
+
+			}
+		</style>
+	</head>
+	<body>
+		<header >
+			Date: <span id="dateCntnr"></span>
+		</header>
+		<div id="mainContainer">
+		</div>
+		<script type="text/javascript">
+			var myworker = new Worker("dateWorker.js");
+			myworker.onmessage = function(event) {
+				console.log("got msg frm worker" + event.data);
+				document.querySelector("#dateCntnr").innerHTML = event.data;
+			}
+
+			var  count = 1;
+			function createWlcmBlock() {
+				var divElement = document.createElement("div");
+				divElement.setAttribute("class", 'block');
+				divElement.innerHTML = "Welcome to page " + count;
+				document.querySelector("#mainContainer").appendChild(divElement);
+				count++
+				if (count == 5) {
+					myworker.terminate();
+				}
+
+			}
+			setInterval(function(){
+					createWlcmBlock();
+			}, 1000);
+
+
+			// var date = new Date();
+			//
+			
+		</script>
+	</body>
+</html>

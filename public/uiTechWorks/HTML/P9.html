@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+	<title>Web Form</title>
+	<style type="text/css">
+	.header{
+		 border: 2px solid red;
+		 margin: 5px auto;
+		 padding: 5px;
+		 background-color: grey;
+		 width: 350px;
+		}
+	.field{
+		
+
+	}
+	</style>
+	
+</head>
+<body style="background-color: rgb(229,241,05);">
+	<h1 style="background-color: white;color: blue;text-align: center;">HTML Forms Example</h1>
+	<form action="/action.php" target="_blank" method="get">
+		<div class="header">
+		First Name:<br>
+		<input type="text" name="firstname"><br>
+		Last Name :<br>
+        <input type="text" name="lastname" ><br/><br>
+
+        Gender:<br>
+		<input type="radio" name="gender" value="male" checked> Male <br>
+		<input type="radio" name="gender" value="female">Female<br>
+        <input type="radio" name="gender" value="other">Other<br><br>
+        Choose From The Option : <br>
+        <input type="checkbox" name="vehicle"  value="bike">I have Bike<br>
+        <input type="checkbox" name="vehicle"  value="car">I have Car<br><br>
+
+		<input type="submit" value="submit" name="click">
+		</div>
+		<h2>Grouping Data with Fieldset</h2>
+		
+
+		<form>
+			<fieldset class="field">
+			<legend> Personal Information </legend>
+			First Name :<br>
+			<input type="text" name="firstname"><br>
+			Last Name :<br>
+			<input type="text" name="lastname">
+			<br>
+			Password :<br>
+			<input type="password" name="password" maxlength="8" placeholder="Choose eight digit Password">
+			
+			<input type="password" name="password" maxlength="8" placeholder="Retype your Password"><br/>
+			  <div>
+			    <input type="checkbox" id="checkbox-unmask" class="checkbox-unmask">
+			      <label for="checkbox-unmask" class="label-unmask">Show my password</label>
+			  </div>
+            <br/>
+			<input type="submit" name="click" value="submit">&nbsp<input type="reset" >
+
+			</fieldset>
+
+
+		</form>
+		<h2>HTML Form Element</h2>
+		<form method="post"  action="xyz.php" target="_blank"><br>
+			Select From List :
+
+			<select name="vehicles" size="5" >
+			
+				<option>Hero</option>
+				<option>Duster</option>
+				<option>Sx4</option>
+				<option>Maestero</option>
+				<option>Mahindra</option>
+				<option>Ferrari</option>
+				<option selected="Bullet">Bullet</option>
+				<option>Splender</option>
+				<option>i10</option>
+				<br><br>
+			</select>
+		
+			<h3>Text Area :</h3>
+			 Write Anything in TextArea
+			 <br>
+
+			<form >
+			
+        
+
+        	<textarea name="message" rows="10" cols="30">Write Here in Text Area</textarea>
+        
+        </select>
+        <input type="submit" name="ok">
+
+		</form>
+
+
+
+	</form>
+
+</body>
+</html>

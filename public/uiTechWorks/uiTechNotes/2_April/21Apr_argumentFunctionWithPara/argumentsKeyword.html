@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>
+			Demonstrating arguments keyword
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function addValues() {
+				
+				console.log(arguments);
+				var result  = 0;
+				for(var i = 0 ; i < arguments.length; i++) {
+					result += arguments[i];
+				}
+				
+				console.log("result is " + result);
+			}
+
+		  	addValues(20, 30, 40, 60, 234, 234,234,23,423,4);
+		</script>
+	</body>
+</html>

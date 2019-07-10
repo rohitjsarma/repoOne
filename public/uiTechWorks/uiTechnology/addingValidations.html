@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>addingValidations</title>
+</head>
+<script type="text/javascript" src="addingValidations.js"></script>
+<style type="text/css">
+	.block{
+		
+		background-color: #ccc;
+		border: 2px solid gray;
+	}
+	li{
+		padding: 2px;
+		margin: 5px;
+		list-style: none;	
+	}
+	.errMsg{
+		display: none;
+		color: red;
+	}
+	input[type=text]{
+       width: 15em;
+       height: 2em;
+       border-radius: 5px;
+	}
+</style>
+<body>
+	<div class="block">
+	<ul>
+		<li>enter first value   :<br><input type="text" name="no1" id="no1" value="" onkeypress="return validationChar(event)" ></li>
+        <div class="errMsg">give only number</div>
+        <li>enter second value  :<br><input type="text" name="no2" id="no2" value="" onkeypress="return validationChar(event)" ></li>
+        <div class="errMsg">give only number</div>
+        <li>addition of two number is : <br><input type="button" name="submit" value="sum" 
+        	id="result" onclick="addition(event)"></li>
+       <li> addition: <br><input type="text" id="addition" name="addition" value=""/></li>
+	</ul>
+	</div>
+</body>
+</html>

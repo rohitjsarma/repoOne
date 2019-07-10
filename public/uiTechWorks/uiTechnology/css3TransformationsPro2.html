@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Css3 Transformation</title>
+		<script type="text/javascript" src="../../../../jQuery/jquery.js"></script>
+		<style type="text/css">
+			.block{
+				width: 315px;
+				height: 180px;
+				background: #ccc;
+				border-radius: 10px;
+				text-align: center;
+				background-repeat: no-repeat;
+				padding: 30px;
+				margin: 20px auto;
+				transform: translate(100px, 200px);
+				border: 5px solid rgba(200, 100, 250, 0.4); 
+				box-shadow: 20px 20px 40px orange; 
+				background-image: url("../../images/d.png")
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="block"></div>
+		<script type="text/javascript">
+			var degValue = 0;
+			setInterval(function(){
+				degValue += 25;
+				$(".block").css("transform", "rotatey(" + degValue + "deg)");
+				if (degValue == 360) {
+					degValue = 5;
+				}
+			}, 300);
+			
+		</script>
+
+
+	</body>
+</html>

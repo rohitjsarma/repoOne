@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>
+			Demonstrating student Details.
+		</title>
+	</head>
+	<body>
+		<div>Demonstrating Student Details.</div>
+		<script type="text/javascript">
+			var sname, sage;
+			sname = "PRASAd";
+			sage = 50;
+			var total = 0;
+
+			var marks = [50, 90, 99, 30, 22, 89, 234, 44, 234,234];
+			console.log(marks);
+			//var total = marks[0] + marks[1] + marks[2];
+
+			for (var i = 0; i < marks.length; i++)  {
+				total += marks[i];
+			}
+
+			var avg = total / marks.length;
+			console.log("Name is " + sname + " Age is " + sage + ' Total is ' +total);
+			
+			console.log("STudent name is " + sname);
+			console.log("STudent Age is " + sage);
+			console.log("STudent Total is " + total);
+			console.log("STudent AVG is " + avg);
+		</script>
+	</body>
+</html>

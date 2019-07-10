@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jsClosuresExample</title>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="arthmaticUtil.js"></script>
+	<style type="text/css">
+		.container{
+			border: 2px solid ;
+			background: gray;
+			height: 200px;
+			width: 350px;
+			margin: 5px;
+			padding: 5px;
+		}
+		input[type=text]{
+			width: 10em;
+			height: 1em;
+			margin: 5px;
+			padding: 5px;
+		}
+		.errMsg{
+			color: red;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		enter the first value:<br><input type="text" name="fval" id="fval"><br>
+
+		enter the second value:<br><input type="text" name="sval" id="sval"><br>
+
+		<br>
+		<button onclick="doAction('sum')">Add</button>
+		<button onclick="doAction('mul')">Mul</button>
+		<button onclick="doAction('sub')">Sub</button>
+		<button onclick="doAction('div')">Div</button>
+
+	</div>
+	<div class="rBlock"></div>
+	
+
+</body>
+</html>

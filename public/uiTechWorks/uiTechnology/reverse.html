@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>reverseNum</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//WAP TO FIND THE REVERSE OF ANY NO.
+        var i=prompt("enter any number");
+        while(i > 0){
+        	var reminder = i%10;
+        	var reverseno=0;
+         reverseno= reverseno*10+reminder;
+         var temp =0;
+         temp  += reverseno;
+        	i =i/10;
+        	i=parseInt(i);
+        	console.log(i);
+        	console.log("REVERSE Is " +reverseno);
+                
+
+        
+        }
+	</script>
+
+</body>
+</html>

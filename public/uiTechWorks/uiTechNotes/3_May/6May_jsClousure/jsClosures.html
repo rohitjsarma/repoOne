@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>
+			Demonstrating JS Closures.
+		</title>
+		<script type="text/javascript" src="app.js"></script>
+		<script type="text/javascript" src="lib/arthmticUtilities.js"></script>
+		
+		<style type="text/css">
+			ul {
+				border: 1px solid;
+				background: #ccc;
+				margin: 20px;
+				padding: 10px;
+			}
+			li {
+				list-style: none;
+				border: 1px solid;
+				background: #fff;
+				margin: 5px;
+				padding: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>
+				Enter first value: <input type="text" id="fval">
+			</li>
+			<li>
+				Enter second value: <input type="text" id="sval">
+			</li>
+			<li>
+				<input type="button" value="Add" onclick="doAction('sum')">
+				<input type="button" value="Sub" onclick="doAction('sub')">
+				<input type="button" value="DIV" onclick="doAction('div')">
+				<input type="button" value="MUL" onclick="doAction('mul')">
+			</li>
+		</ul>
+		<div id="rBlock"></div>
+		<div>No of clicks happend <span id="cntBlk"></span></div>
+	</body>
+</html>

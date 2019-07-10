@@ -1,0 +1,114 @@
+            .main{
+				color: green;
+				background-color: orange;
+				text-align: center;
+			}
+			h3.main{
+				text-align: right;
+				color: green;
+				border: 2px solid dodgerblue;
+			}
+			p.main,h2.main{
+				border: 2px solid black;
+			}
+			#main1{
+				height: 150px;
+				width: 150px;
+				margin: 5px;
+				padding:10px;
+				border: 1px solid magenta;
+				color: gray;
+				background-color: yellow;
+				text-decoration:underline;
+				text-align: center; 
+				background-image: url("file:///C:/Users/rohit/Desktop/uiTechWorks/1.jpeg");
+			}
+			body{
+			
+				width: 850px;
+				background-image: url("file:///C:/Users/rohit/Desktop/uiTechWorks/5.jpeg");
+				background-repeat: no-repeat;
+				background-position: center;
+				background-position: right top;
+			/*	background-attachment: fixed; */
+
+			}
+			p.dotted{
+				border-style: dotted;
+				color: pink;
+			}
+			p.dashed{
+				border-style: dashed;
+				color: tomato;
+			}
+			p.mix{
+				border-style: dotted dashed solid double;
+				color: purple;
+			}
+			p.solid{
+				border-style: solid;
+				color: green;
+
+			}
+			p.groove{
+                border-style: groove;
+                color: yellow;
+			}
+			p.double{
+                border-style: double;
+                color: violet;
+			}
+			p.round{
+				border-style: double;
+				color: red;
+				border-radius: 15px;
+			}
+			p.ridge{
+				border-style: ridge;
+				
+			}
+			p.inset{
+				border-style: inset;
+				border-left: 5px solid green
+			}
+			p.outset{
+				border-style: outset;
+			}
+			p.bottom{
+				border-bottom:5px solid red;
+				background-color: gray;
+			}
+			.border{
+				border: 2px solid black;
+				text-align: center;
+				margin: 5px;
+				padding: 5px;
+			}
+			.outline{
+				border: 2px solid green;
+				outline: 10px solid red;
+				color: violet;
+				margin: auto;    
+			    padding: 20px;
+			    text-align: center;
+			    outline-style: double;
+			    border-radius: 5px;
+
+			}
+			.text{
+				border: 2px solid black;
+				
+				text-align: justify;
+				letter-spacing: 2px;
+				word-spacing: 5px;
+				text-indent: 50px;
+				line-height: -5px;
+			}
+			h1{
+				text-align: center;
+				color: purple;
+				text-decoration:overline;
+				text-shadow: 3px 2px red;
+
+			 /* text-decoration: underline; */
+			}

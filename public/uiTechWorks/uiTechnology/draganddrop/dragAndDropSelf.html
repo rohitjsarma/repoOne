@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Drag and Drop</title>
+		<script type="text/javascript" src="jquery.js"></script>
+		<style type="text/css">
+			.container{
+				height: 400px;
+				width: 495px;
+				display: block;
+				border: 1px solid gray;
+				background-color: #ccc;
+				text-align: center;
+				float: left;
+			}
+			.image_size{
+				height: 100px;
+				width: 100px;
+			}
+			.error{
+				color: red;
+				height:50px;
+				width: 200px;
+				background-color: yellow;
+				position: absolute;
+				z-index: 2;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="container" id="male_container" ondragover="DragOver(event)" ondrop="Drop(event)">Male Clothing</div>
+		<div class="container" id="female_container" ondragover="DragOver(event)" ondrop="Drop(event)">Female Clothing</div>
+		<div class="container" id="kids_container" ondragover="DragOver(event)" ondrop="Drop(event)">Kids Clothing</div>
+		<div style="border: 1px solid; width: 500px">
+		<table>
+			<tr>
+				<td>Male Clothing</td>
+				<td><img src="images/male1.jpg" class="image_size" id="male_pic1" draggable="true" ondragstart="DragStart(event)"></td>
+				<td><img src="images/male2.jpg" class="image_size" id="male_pic2" draggable="true" ondragstart="DragStart(event)"></td>
+				<td><img src="images/male3.jpg" class="image_size" id="male_pic3" draggable="true" ondragstart="DragStart(event)"></td>
+				<td><img src="images/male4.jpg" class="image_size" id="male_pic4" draggable="true" ondragstart="DragStart(event)"></td>
+			</tr>
+			<tr>
+				<td>Female Clothing</td>
+				<td><img src="images/female1.jpg" class="image_size" id="female_pic1" draggable="true" ondragstart="DragStart(event)"></td>
+				<td><img src="images/female2.jpg" class="image_size" id="female_pic2" draggable="true" ondragstart="DragStart(event)"></td>
+				<td><img src="images/female3.jpg" class="image_size" id="female_pic3" draggable="true" ondragstart="DragStart(event)"></td>
+				<td><img src="images/female4.jpg" class="image_size" id="female_pic4" draggable="true" ondragstart="DragStart(event)"></td>
+			</tr>
+			<tr>
+				<td>Kids Clothing</td>
+				<td><img src="images/kids1.jpg" class="image_size" id="kids_pic1" draggable="true" ondragstart="DragStart(event)"></td>
+				<td><img src="images/kids2.jpg" class="image_size" id="kids_pic2" draggable="true" ondragstart="DragStart(event)"></td>
+				<td><img src="images/kids3.jpg" class="image_size" id="kids_pic3" draggable="true" ondragstart="DragStart(event)"></td>
+				<td><img src="images/kids4.jpg" class="image_size" id="kids_pic4" draggable="true" ondragstart="DragStart(event)"></td>
+			</tr>
+		</table>
+		</div>
+
+		<script type="text/javascript">
+			//var dragged_image_id;
+
+			function DragOver(m){
+				m.preventDefault();
+			}
+
+			function DragStart(event){
+				console.log("Drag Started");
+				dragged_image_id=event.target.getAttribute('id');
+			}
+
+			function Drop(event){
+				event.preventDefault();
+
+				console.log("Image id is: "+dragged_image_id);
+				console.log("Image Droped");
+				console.log(event);
+				dropedInContainerWithId=event.target.getAttribute('id');
+				console.log("Container id is: "+dropedInContainerWithId);
+
+				if (dropedInContainerWithId=="male_container" && (dragged_image_id=="male_pic1"||dragged_image_id=="male_pic2"||dragged_image_id=="male_pic3"||dragged_image_id=="male_pic4"))
+				{
+
+					var image_source=document.querySelector("#"+dragged_image_id).getAttribute('src');
+
+					var imageOnContainer= document.createElement("img");
+					imageOnContainer.setAttribute("src",image_source);
+					imageOnContainer.setAttribute("height","100px");
+					imageOnContainer.setAttribute("width","100px");
+					event.target.appendChild(imageOnContainer);
+				}
+
+				else if(dropedInContainerWithId=="female_container" && (dragged_image_id=="female_pic1"||dragged_image_id=="female_pic2"||dragged_image_id=="female_pic3"||dragged_image_id=="female_pic4"))
+				{
+
+					var image_source=document.querySelector("#"+dragged_image_id).getAttribute('src');
+
+					var imageOnContainer= document.createElement("img");
+					imageOnContainer.setAttribute("src",image_source);
+					imageOnContainer.setAttribute("height","100px");
+					imageOnContainer.setAttribute("width","100px");
+					event.target.appendChild(imageOnContainer);
+				}
+
+				else if(dropedInContainerWithId=="kids_container" && (dragged_image_id=="kids_pic1"||dragged_image_id=="kids_pic2"||dragged_image_id=="kids_pic3"||dragged_image_id=="kids_pic4"))
+				{
+
+					var image_source=document.querySelector("#"+dragged_image_id).getAttribute('src');
+
+					var imageOnContainer= document.createElement("img");
+					imageOnContainer.setAttribute("src",image_source);
+					imageOnContainer.setAttribute("height","100px");
+					imageOnContainer.setAttribute("width","100px");
+					event.target.appendChild(imageOnContainer);
+				}
+
+				else
+				{	
+					console.log("Invalid Drop action attempted");
+					alert("wrong selection");
+					/*$("<div></div>").addClass("error");
+					$(".error").val="Please Choose the correct cloth Combination";*/
+				}
+			}
+		</script>
+	</body>
+</html>

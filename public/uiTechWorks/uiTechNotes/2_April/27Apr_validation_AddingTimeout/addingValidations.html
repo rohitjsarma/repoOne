@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title>
+			Adding validations while reading data from user.
+		</title>
+		<style type="text/css">
+			li {
+				background: #fff;
+				padding: 10px;
+				margin: 10px;
+				list-style: none;
+			}
+			ul {
+				background: #ccc;
+				margin: 20px;
+				padding: 20px;
+			}
+			.resultBlock {
+				text-align: center;
+				color: green;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>	
+		<ul>
+			<li>
+				Enter first value <input type="text" id="fval" onkeypress="return validateChar(event)">
+			</li>
+			<li>
+				Enter second value <input type="text" id="sval" onkeypress="return validateChar(event)">
+			</li>
+			<li>
+				<input type="button" value="Do Sum" onclick="doJob(event)">
+			</li>
+		</ul>
+		<div class="resultBlock">
+			The sum of Two numbers is : <span id="rBlock"></span>
+		</div>
+		<script type="text/javascript">
+			 makeValuesEmpty();
+			function doJob(event) {
+				console.log(event)
+				var fval = document.querySelector("#fval").value;
+				fval = parseInt(fval);
+				var sval = document.querySelector("#sval").value;
+				sval = parseInt(sval);
+				var result = fval + sval;
+
+				document.querySelector("#rBlock").innerHTML=  "<b>" + result + "</b>";
+				document.querySelector(".resultBlock").style.display = 'block';
+				makeValuesEmpty();
+			}
+
+			function makeValuesEmpty() {
+				document.querySelector("#fval").value = '';
+			 	document.querySelector("#sval").value = '';
+			}
+
+			function validateChar(event) {
+				if (event.charCode>= 97 && event.charCode <=122) {
+					return false;
+				}
+				return true;
+			}
+
+		</script>
+	</body>
+</html>

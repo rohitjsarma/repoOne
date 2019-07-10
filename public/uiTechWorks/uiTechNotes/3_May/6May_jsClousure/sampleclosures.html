@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>
+			TESTing Closures
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		
+			var a = 10;
+			console.log(a);
+			var b = 50;
+
+			function showmsg() {
+				console.log("hello");
+			}
+			showmsg();
+
+		
+
+			var uitls = (function(){
+			
+				console.log("Closures got invoked");
+				var b = 40;
+				console.log("b is " + b);
+				
+
+				function showtext() {
+					console.log("b value inside is "+ b);
+
+				}
+				showtext();
+
+				var obj =  {
+					bval: b,
+					showtextMsg: function() {
+						showtext();
+					}
+				};
+				return obj;
+			})();
+			console.log(uitls)
+			uitls.showtextMsg();
+		
+		</script>
+	</body>
+</html>

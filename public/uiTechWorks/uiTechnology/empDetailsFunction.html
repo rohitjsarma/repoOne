@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>employeeDetails</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			var ename="raaz";
+			var age = 25;
+			var gender = "male";
+			var ename="rani";
+			var age = 20;
+			var gender = "female";
+		
+			var bsal=prompt("enter the basic salary");
+			bsal = parseInt(bsal);
+			var hra = prompt("enter hra");
+			hra = parseInt(hra);
+			var da= prompt("enter da");
+			da = parseInt(da);
+			var grossSalary=0;
+			
+			function grosssal(){
+				grossSalary=bsal+(bsal*hra/100)+(bsal*da/100);
+				console.log("the total gross salary is " +grossSalary);
+			}
+			function totalTax(){
+
+				taxPaidMale();
+				taxPaidFemale();
+			}
+			function taxPaidMale(){
+				
+				if (gender="male") {
+					console.log("tax need to paid as per rule");
+				}if(grossSalary<15000){
+					console.log(grossSalary*15/100);
+				}if(grossSalary>15000){
+					console.log(grossSalary*25/100);
+				}else{
+					console.log("tax exempted");
+				}
+			}
+			function taxPaidFemale(){
+			if(gender="female"){
+					console.log("tax need to paid as per rule");
+				}if(grossSalary<15000){
+					console.log(grossSalary*10/100);
+				}if(grossSalary>15000){
+					console.log(grossSalary*20/100);
+				}else{
+					console.log("tax exempted");
+				}
+
+			}
+				
+				
+			
+			function empDetail(){
+				console.log("employee name is " +ename);
+				console.log("emplyee age is " +age);
+				console.log("employee gender is " +gender);
+			//	console.log("employee total salary " +grossSalary);
+			}
+
+            empDetail();
+			grosssal();
+			totalTax();
+		</script>
+
+	</body>
+</html>

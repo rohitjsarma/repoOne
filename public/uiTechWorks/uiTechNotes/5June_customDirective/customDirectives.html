@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Angular Custom Directives.
+		</title>
+		<script type="text/javascript" src="../../../../js/angular.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<link rel="stylesheet" type="text/css" href="app.css">
+	</head>
+	<body>
+		<div ng-app="custmDirApp" ng-controller="custDirCntrl">
+			<div class="title">Student Details</div>
+			<div std-details color="green" id="first" class="test" currentuser="sDetails1"></div>
+			<div std-details color="blue" id="second" msg="Hello World" currentuser="sDetails2"></div>
+
+		</div>
+	</body>
+</html>

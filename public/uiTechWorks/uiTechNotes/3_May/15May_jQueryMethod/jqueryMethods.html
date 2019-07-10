@@ -1,0 +1,129 @@
+<html>
+	<head>
+		<title>
+			Demonstrating jquery selectors and methdos
+		</title>
+		<script type="text/javascript" src="../../../../jQuery/jquery.js"></script>
+		<style type="text/css">
+			.block {
+				background: green;
+				border: 2px solid;
+				height: 200px;
+				width: 100px;
+			}
+			table, td, tr, thead, th {
+				border: 1px solid;
+			}
+			.highlight {
+				background: green;
+				width: 100px;
+				height: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" value="APPLY" id="ursBtn">
+		<p>
+			Item1
+		</p>
+		<div>
+			<span>Item 2</span>
+		</div>
+		<p>
+			<span>Item 3</span>
+		</p>
+		<div>
+			<span>Item 4</span>
+		</div>
+		<input type="text">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="radio">
+
+		<table>
+			<thead>
+				<tr>
+					<td>sno.</td>
+					<td>Name</td>
+					<td>AGe</td>
+					<td>Gender</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Prasad</td>
+					<td>40</td>
+					<td>Male</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Prasad</td>
+					<td>40</td>
+					<td>Male</td>
+				</tr><tr>
+					<td>1</td>
+					<td>Prasad</td>
+					<td>40</td>
+					<td>Male</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Prasad</td>
+					<td>40</td>
+					<td>Male</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Prasad</td>
+					<td>40</td>
+					<td>Male</td>
+				</tr>
+			</tbody>
+			<div class="block">
+				BLOCK Content
+			</div>
+			<div class="tab ">Hello</div>
+			<input type="text" id="uname">
+		</table>
+		<script type="text/javascript">
+
+			 /*$("#ursBtn").click(function(event){
+				applyProp();
+			}); */
+		
+			/*$("#ursBtn").on("mouseover", function(event){
+				applyProp();
+			});
+			$("#ursBtn").on("click", function(event){
+				applyProp();
+			}); */
+
+		/*	$("#ursBtn").on({
+				'click': function() {
+					console.log('click got fired');
+				},
+				'mouseover': function() {
+					console.log('Mouse got fired');
+				}
+			})*/
+	
+
+			function applyProp() {
+				alert("Test")
+				// $("p:first").addClass('block');
+				// $("div span").addClass('block');
+				// $(':checked').css({ margin: '50px'});
+				// $('div:parent').css({ border: '1px solid', "margin": '5px'});
+				// $("tr:gt(2)").addClass("block");
+				// $(".block").toggle();
+				if ($(".tab").hasClass('highlight')) {
+					alert($(".tab").text());
+				}
+				 alert($("#uname").val());
+				//$("#uname").val("Hello all");
+			}
+		</script>
+	</body>
+</html>
+

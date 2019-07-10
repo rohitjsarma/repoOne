@@ -1,0 +1,28 @@
+GOOGLE CDN(Content Delivery Network)
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+
+MICROSOFT CDN(Content Delivery Network)
+"https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"
+
+ANGULAR JS
+"https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"
+
+SYSTEM PATH
+../../../../jQuery/jquery.js
+
+SYSTEM PATH
+../../../../js/angular.min.js
+
+jquery.loadTemplate-1.4.4.min.js
+
+for cross domain-->>(paste into app.js)
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+
+<!-- Font Awesome Icon Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font
+-awesome/4.7.0/css/font-awesome.min.css">

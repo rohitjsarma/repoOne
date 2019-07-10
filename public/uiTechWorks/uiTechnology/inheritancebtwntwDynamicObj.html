@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Inheritance between two Dynamic Object</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function schoolDetails(obj){
+				this.name=obj.name;
+				this.sLoc=obj.sLoc;
+				this.estd=obj.estd;
+				this.rating=obj.rating;
+				this.diplaySchDetails = function(){
+					console.log("The school name " +this.name);
+					console.log("The school loc is " +this.sLoc);
+					console.log("The esdt Year is " +this.estd);
+					console.log("The Rating is " +this.rating);
+				}
+
+			}
+			function studentDetails(obj){
+				this.studentName =obj.studentName;
+				this.sAge = obj.sAge;
+				this.gender= obj.gender;
+				this.course=obj.course;
+				this.diplayStdDetails =function(){
+					console.log("The Student name " +this.studentName);
+					console.log("The Student Age is " +this.sAge);
+					console.log("The gender is " +this.gender);
+					console.log("The course is " +this.course);
+					this.diplaySchDetails();
+
+
+				}
+			}
+			studentDetails.prototype = new schoolDetails({name:'ABC School', sLoc:'Hyderabad',estd:2005, 'rating': '4/5'});
+			var s1 = new studentDetails({studentName:'Razz',sAge:25,gender:"male",course:'UI Technology'});
+			s1.diplayStdDetails();
+
+
+		</script>
+
+	</body>
+</html>

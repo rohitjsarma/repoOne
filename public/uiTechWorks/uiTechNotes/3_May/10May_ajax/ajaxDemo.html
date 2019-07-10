@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Demonstrating AJAX using jquery</title>
+		<script type="text/javascript" src="../../../../jQuery/jquery.js"></script>
+	</head>
+	<body>
+		<div>
+			Demonstrating ajax 
+		</div>
+		<div id="msgContainer"></div>
+		<input type="button" value="Get Data" onclick="getData()">
+
+		<script type="text/javascript">
+			function getData() {
+				console.log('before putting req');
+			
+				$.ajax({
+					//url: 'http://localhost:8080/10May/data/details.json',
+			url:'http://localhost:8081/uiTechWorks/uiTechNotes/10May/data/details.json',
+					dataType: 'JSON',
+					method: 'GET',
+					async: false,
+					success: function(res) {
+						console.log("Succesfuly got response");
+						console.log(res);
+						$("#msgContainer").html(res.message);
+					},
+					error: function(err) {
+						console.log(err);
+						console.log("Error while communicating");
+					}
+				});
+				console.log('after  req done');
+			}
+		</script>	
+	</body>
+</html>

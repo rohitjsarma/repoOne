@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<title>
+			Demonstrating CSS3 Keyframes.
+		</title>
+		<style type="text/css">
+			.container  {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+			}
+
+			.block {
+				position: absolute;
+				bottom: 40px;
+				right: 20px;
+				width: 200px;
+				height: 120px;
+				border: 2px solid;
+				background: #ccc;
+				text-align: center;
+				animation: mystyles 15s ;
+			}
+			@keyframes mystyles{
+				1% {
+					bottom: 0;
+					left: 0;
+					background: green;
+					position: absolute;
+				}
+				18% {
+					width: 100px;
+					height: 150px;
+					background: yellow;
+					position: absolute;
+					right: 0;
+				}
+				30% {
+					top: 0;
+					left: 60px;
+					background: red;
+					position: absolute;
+				}
+				40% {
+					bottom: 0;
+					right: 70px;
+					background: blue;
+					position: absolute;
+				}
+				60% {
+					top: 10px;
+					right: 5px;
+					background: pink;
+				}
+				75% {
+					bottom: 50px;
+					left: 10px;
+					background: red;
+					position: absolute;
+				}
+				90% {
+					background: blue;
+					top: 10px;
+					left: 5px;
+					position: absolute;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="block">
+				CONTENT
+			</div>
+		</div>
+	</body>
+</html>

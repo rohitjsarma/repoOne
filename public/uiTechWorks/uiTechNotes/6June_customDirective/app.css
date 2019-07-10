@@ -1,0 +1,33 @@
+.dlgBody {
+	border: 2px solid;
+	border-radius: 10px;
+	position: absolute;
+	width: 500px;
+	height: 250px;
+	top: 30%;
+	left: 20%;
+}
+
+.dlgheader {
+	padding: 10px 2px;
+	border-bottom: 1px solid;
+	background: #ccc;
+}
+
+.close {
+	position: absolute;
+	right: 10px;
+	cursor: pointer;
+	font-weight: bolder;
+	top: 6px;
+}
+
+.dlgContent {
+	text-align: center;
+	padding: 50px;
+}
+
+.btnCntainr {
+	margin: 5px;
+	text-align: right;
+}

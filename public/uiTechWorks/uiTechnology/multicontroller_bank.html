@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BnakServicesWithMultiController</title>
+	<script type="text/javascript" src="../../../../js/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="multicontroller_bank.css">
+</head>
+<body ng-app="myapp" >
+	<script type="text/javascript">
+		angular.module("myapp",[])
+		.controller("c1",function($scope,$rootScope){
+	      $rootScope.TotatlBalance=300000
+	      $scope.deposit=function(){
+
+	      	$rootScope.TotatlBalance += $scope.depsit
+	      	$scope.successDpst=true
+	      	$scope.depositSuccessMsg="Successfully Amount Deposisted"
+
+	      }
+		})
+		.controller("c2",function($scope,$rootScope){
+			$scope.withdraw=function(){
+	      	$rootScope.TotatlBalance -= $scope.wthdraw
+	      	$scope.successWdraw=true
+	      	$scope.withdrawSuccessMsg="Successfully Amount Withdrawn"
+
+
+	      }
+
+		})
+	</script>
+	<div class="Deposit" ng-controller="c1">
+		<b style="color: green;float: right;">Total Balance:{{TotatlBalance}}</b>
+		<h1>Deposit Operation</h1>
+		<b style="color:navy">Choose Amount To Deposit</b> :
+		<input type="number" ng-model="depsit">
+	<input type="button" name="" value="Deposit" ng-click="deposit()" >
+	<h3 style="color: red" ng-show="successDpst">{{depositSuccessMsg}}</h3>
+	</div>
+
+	<div class="Withdraw" ng-controller="c2">
+		<b style="color: green;float: right;">Total Balance:{{TotatlBalance}}</b>
+		<h1>Withdraw Operation</h1>
+		<b style="color:navy">Choose Amount To Withdraw</b> :
+		<input type="number" ng-model="wthdraw">
+	<input type="button" name="" value="Withdraw" ng-click="withdraw()" >
+		<h3 style="color: red" ng-show="successWdraw">{{withdrawSuccessMsg}}</h3>
+	</div>
+
+</body>
+</html>

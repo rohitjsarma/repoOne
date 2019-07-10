@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WatcherExample</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="c1">
+	<script type="text/javascript">
+		angular.module("myapp",[])
+		.controller("c1",function($scope){
+		$scope.x=100;
+		$scope.y=200;
+		$scope.z=300;
+
+		})
+	</script>
+       {{x}}
+
+</body>
+</html>

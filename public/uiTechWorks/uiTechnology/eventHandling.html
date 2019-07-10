@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>differentEventHnadlingExamples</title>
+	</head>
+	<style type="text/css">
+		.overOut{
+			background-color:yellow;
+			color: red;
+			width:120px;
+			height:20px;
+			padding:40px;>
+		}
+	</style>
+	<body>
+		<h1 onclick="this.innerHTML='WELCOME'"> click on me</h1>
+		<button onclick="displayDate()">The Time Is</button>
+		<script type="text/javascript">
+			function displayDate() {
+			document.getElementById('pid').innerHTML=Date();
+			}
+		</script>
+		<p id="pid"></p>
+		
+		<div class="overOut" onmouseover="mOver(this)" onmouseout="mOut(this)" >
+			mouse over me
+		</div>
+
+		<script>
+		function mOver(obj) {
+		    obj.innerHTML = "Thank You mouse over"
+		}
+
+		function mOut(obj) {
+		    obj.innerHTML = " thank you mouse out"
+		}
+		</script><br><br><div style="border: 2px solid red; height: 350px;width: 180px;margin: 5px;padding: 5px;">
+		<img src="../images/bulboff.png" id="imgid" onmouseup="lighton()" onmousedown="lightoff()">
+		<p>click mouse and hold down</p>
+		</div>
+
+		<script type="text/javascript">
+			function lighton() {
+				document.getElementById('imgid').src='../images/bulbon.gif'	
+			}
+			function lightoff(argument) {
+				document.getElementById('imgid').src='../images/bulboff.png'
+				
+			}
+			</script>
+			</script>
+			<button id="bid" onclick="myfunc()">hello world</button>
+			<script type="text/javascript">
+			//document.getElementById("bid").addEventListener("click" myfunc);
+			function myfunc() {
+				alert("hello there");
+			}
+			
+		   </script><br><br>
+		   <div>
+		   	<button id="btn1" value="">Click Here</button>
+		   	<p id="demo"></p>
+		   	<script type="text/javascript">
+		   		var btnElement = document.getElementById('btn1');
+		   		btnElement.addEventListener('click' ,fun1);
+		   		btnElement.addEventListener('mouseover',fun2 );
+		   		btnElement.addEventListener('mouseout', fun3);
+		   		function fun1() {
+		   		  document.getElementById('demo').innerHTML   += 'clicked <br>';
+		   		}
+		   		function fun2() {
+		   			document.getElementById('demo').innerHTML  += 'onmouseover <br>';
+		   			
+		   		}
+		   		function fun3() {
+		   			document.getElementById('demo').innerHTML  += 'onmouseout <br>';
+		   			
+		   		}
+		   
+		   	</script>
+		  </div>
+
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>angularWithAppAndControl</title>
+	<script type="text/javascript" src="../../../../js/angular.min.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="c1">
+	<script type="text/javascript">
+		app= angular.module("myapp",[])
+		app.controller("c1",function($scope){
+			$scope.x='prasad'
+		
+
+		})
+	</script>
+	{{x}}
+	<div>
+		{{10+20}}
+	</div>
+	<h1>the name is <span style="color: green">{{x}}</span></h1>
+
+
+</body>
+</html>

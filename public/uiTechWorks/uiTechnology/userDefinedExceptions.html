@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>userDefinedException</title>
+		<style type="text/css">
+			.container{
+				border: 2px solid;
+				background-color: #ccc;
+				color: green;
+				height: 200px;
+				width: 400px;
+				padding: 5px;
+				margin: 5px
+			}
+			
+			input[type=text] {
+              width:25em;  height: 2em;
+              border-radius: 5px;
+            }
+			.errMsg{
+				color: red;
+				display: none;
+				border: 2px solid green;
+				text-align: center;
+				margin: 5px;
+				padding: 5px;
+				background-color: white;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<p>User Defined Exception</p>
+			enter name : <input type="text" name="uname" id="fname"><br>
+			<br>
+			enter age : <input type="text" name="uage" id="sage"><br>
+			<div>
+				<li class="errMsg"><b>Age must be greater than 21.,</b></li>
+			</div>
+			<button onclick="showMessage()">save</button>
+		</div>
+	<script type="text/javascript">
+		function showMessage() {
+			var userDetails={};
+			try{
+               userDetails.name=document.querySelector('#fname').value;
+               userDetails.age=document.querySelector('#sage').value;
+
+               if (userDetails.age < 21) {
+						throw 'age invalid';
+					}
+				}catch(err){
+					console.log(err);
+					document.querySelector('.errMsg').style.display='block';
+				}
+			
+		}
+		
+	</script>
+	</body>
+</html>

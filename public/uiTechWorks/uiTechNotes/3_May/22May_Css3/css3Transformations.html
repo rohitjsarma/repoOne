@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>
+			Demonstrating css3 transformations.
+		</title>
+		<style type="text/css">
+			.block {
+				width: 200px;				
+				
+				background: #ccc;
+				border-radius: 10px;
+				text-align: center;
+				padding: 30px;
+				margin: 250px auto;	
+				transform: translate(100px, 200px);
+				border: 5px solid rgba(200, 100, 250, 0.4); 
+				box-shadow: 20px 20px 40px green; 
+				background-image: url("images/bg3.png")
+			}
+			.block:hover {
+				/*transform: scale(2, 3); */
+
+			}
+		</style>
+		<script type="text/javascript" src="../jquery.js"></script>
+	</head>
+	<body>
+		<div class="block">
+			CONTENT
+		</div>
+		<script type="text/javascript">
+		/*
+			var degValue = 0;
+			setInterval(function(){
+				degValue += 5;
+				$(".block").css("transform", "rotateY(" + degValue + "deg)");
+				if (degValue == 360) {
+					degValue = 5;
+				}
+			}, 200);
+		*/
+		</script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+{
+	"studentDetails": [
+          {
+          	"name":"Razz",
+          	"age":25,
+          	"gender":"Male",
+          	"location":"Hyderabad"
+          }
+          {
+          	"name":"Riya",
+          	"age":28,
+          	"gender":"Female",
+          	"location":"Secunderabad"
+          }
+          {
+          	"name":"Rahul",
+          	"age":29,
+          	"gender":"Male",
+          	"location":"Bangalore"
+          }
+          {
+          	"name":"Vishal",
+          	"age":28,
+          	"gender":"Male",
+          	"location":"Patna"
+          }
+
+
+
+	]
+}

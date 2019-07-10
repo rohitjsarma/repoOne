@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+ <head><h1>Form Example</h1> 
+ <link rel="stylesheet" type="text/css" href="manu4.css">
+ </head>
+  <title>Form</title>
+
+ <body>
+ 
+<div>
+<address>
+Written by <a href="mailto:rohitjsarma@gmail.com">rohit sharma</a>.<br> 
+Visit us at:<br>
+<a href="manu2.html" target="_target">CLICK</a><br>
+Ameerpet, Hyderabad<br>
+500016
+India
+</address>
+
+  
+<CENTER><button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click  to display Date and Time.</button>
+
+<p id="demo"></p>
+
+</CENTER>
+</div>
+<br></br>
+
+
+  <h2>Sign Up  Form</h2>
+
+  <form>
+  First name:<br>
+  <input type="text" name="firstname" value="First">
+  Last name:
+  <input type="text" name="lastname" value="last"><br>
+  Username:<br>
+  <input type ="text" name="username"><br>
+  Password:<br>
+  <input type="password" name="password"><br>
+  Retype Password:<BR>
+  <input type="password" name="password"><br>
+   Birthday:<br>
+   <input type="date" name="bday" min="1975-01-01"<br></br>
+   Birthday:<br>
+    <input type="month" name="bdaymonth">
+  
+<br></br>
+   Gender:<br>
+   <input type ="radio" name="gender" value="male">MALE
+   <input type ="radio" name="gender" value="female">FEMALE
+    <input type ="radio" name="gender" value="male">OTHER<br>
+	</BR>
+	Favourate Game:<br>
+	<input type="checkbox" name="favgamer" value="cricket">Cricket
+	<input type="checkbox" name="favgame" value="football">Football
+	<input type="checkbox" name="favgame" value="chess">Chess<br></br>
+
+	Mobile :<br>
+	<input type="tel" name="usertel" ><br></br>
+	Email:<br>
+	<input type="email" name="email"><br></br>
+
+  Location:<br>
+  <SELECT>
+  <option value="INDIA">INDIA</option>
+  <option value="PAKISTAN">PAKISTAN</option>
+  <option value="SRI LANKA">SRI LANKA</option>
+  <option value="CHINA">CHINA</option>
+  <option value="AUSTRIA">AUSTRIA</option>
+  <option value="BRITAIN">BRITAIN</option>
+  <option value="USA">USA</option>
+  <option value="MALI">MALI</option>
+  </SELECT>
+  <br></br>
+
+  
+
+<button onclick="myFunction()">submit</button>
+
+<script>
+function myFunction() {
+    alert("thanx for signing up ");
+}
+</script><br></br>
+  
+
+
+
+
+ 
+  
+  
+</form>
+
+
+ </body>
+</html>

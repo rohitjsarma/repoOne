@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>switchCase</title>
+	</head>
+	<body>
+			<script type="text/javascript">
+			var result =0;
+			var firstNum = prompt("enter the first number");
+			var secondName = prompt("enter the second number");
+			firstNum= parseInt(firstNum);
+			secondNum =parseInt(secondNum);
+			var userSelection = prompt("select add/sub/mul/div");
+
+			/* if(userSelection='add'){
+			 	result=firstNum+secondNum;
+			 	console.log(" the sum of two number " +result);
+			 }else if(userSelection='sub'){
+                 result=firstNum-secondNum;
+                 console.log(" the substraction of two number " +result);
+			 }else if(userSelection= 'mul'){
+			 	result = firstNum*secondNum;
+			 	console.log(" the multiplication of two number " +result);
+			 }else if(userSelection = 'div'){
+			 	result = firstNum/secondNum;
+			 	console.log(" the divison of two number " +result);
+			 }else{
+			 	console.log("wrong userSelection")
+			 }*/
+			 switch(userSelection){
+			 	case 'add' :
+			 	result = firstNum+secondNum;
+			 	console.log("the sum of two number " +result);
+			 	break;
+			 	case 'mul' :
+			 	result = firstNum*secondNum;
+			 	console.log("the mul of two number " +result);
+			 	break;
+			 	case 'div':
+			 	result = firstNum/secondNum;
+			 	console.log("the mul of two number " +result);
+			 	break;
+			 	case 'sub':
+			 	result = firstNum-secondNum;
+			 	console.log("the substraction of two number " +result);
+			 	break;
+			 	default:
+			 	console.log("wrong userSelection");
+
+
+			 }
+		</script>
+
+	</body>
+</html>

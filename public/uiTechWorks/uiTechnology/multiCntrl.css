@@ -1,0 +1,45 @@
+h1{
+	color: red;
+	border: 1px solid green;
+	text-align: center;
+}
+.balance{
+	color: red;
+	font-size: 40;
+
+}
+.balBlock{
+	color:lightgreen;
+	font-weight: bolder;
+	text-align: right;
+}
+.successMsg{
+	color:hotpink;
+	font-weight: 40px;
+	text-align: center;
+	border: 1px solid green;
+	margin: 5px;
+	padding: 5px;
+	width: 15em;
+}
+.block1,.block2{
+	background-color: white;
+	border: 2px solid magenta;
+	width: 350;
+	height: 20%;
+	margin:5px;
+
+}
+h2{
+	text-align: center;
+	color:orange;
+}
+.wdraw,.dpst{
+	text-align: center;
+	margin: 5px;
+	padding: 5px;
+
+}
+#btn{
+	display: inline-block;
+}

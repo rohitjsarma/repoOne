@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Class And Inheritance between Static and dynamic objects.
+		</title>
+		<style type="text/css">
+			li {
+				list-style: none;
+				border: 1px solid;
+				background: #ccc;
+				margin: 10px;
+				padding: 10px;
+			}
+			ul {
+				border: 2px solid;
+				padding: 20px;
+				margin: 10px;
+			}
+			.maintitle {
+				color: green;
+				font-size: 20px;
+				text-align: center;
+				text-decoration: underline;
+			}
+			.subtitle  {
+				text-align: center;
+				color: blue;
+				font-size: 15px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="block">
+			<div class="maintitle">
+				ABC School REGISTRATION PAGE
+			</div>
+			<div class="subtitle">Student Registration Block</div>
+			<ul>
+				<li>
+					Enter student Name: <input type="text" id="sName">
+				</li>
+				<li>
+					Enter student Age: <input type="text" id="sAge">
+				</li>
+				<li>
+					Select Country:
+					<select id="sCountry">
+						<option>India</option>
+						<option>USA</option>
+						<option>China</option>
+					</select>
+				</li>
+				<li>
+					<input type="button" value="Save Details" onclick="readUserDetails()">
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			function studentDetails(name, uage, country) {
+				this.name = name;
+				this.age = uage;
+				this.country = country;
+				this.displayData = function() {
+					console.log("Student name is    :" + this.name);
+					console.log("Student Age is     :" + this.age);
+					console.log("Student Country is :" + this.country);
+				}
+			}
+			function readUserDetails() {				
+				var sname = document.querySelector("#sName").value;
+				var sage = document.querySelector("#sAge").value;
+				var country = document.querySelector("#sCountry").value;
+				var sDetails = new studentDetails(sname, sage, country);
+				
+				sDetails.displayData();
+			}
+		</script>
+	</body>
+</html>
+

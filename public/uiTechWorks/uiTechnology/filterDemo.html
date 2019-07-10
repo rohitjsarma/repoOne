@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>angularFilterExample</title>
+	<script type="text/javascript" src="../../../../js/angular.min.js"></script>
+	<script type="text/javascript" src="filter.js"></script>
+	<style type="text/css">
+		table, th, tr, td, th {
+				border: 1px solid;
+			}
+	</style>
+</head>
+<body ng-app="myapp" ng-controller="c1">
+	<div class="main">
+
+	<input type="text" placeholder="search text" ng-model="userSearchText">
+		<h2 style="color:orange;text-align: center;">Student Details</h2>
+		<table cellpadding="5" cellspacing="5">
+			<thead>
+				<tr >
+					<th>Sno</th>
+					<th>Name</th>
+					<th>Pending Fee</th>
+					<th>Fee Paid</th>
+					<th>Location</th>
+					<th>Dob</th>
+					<th>Gender</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr     ng-repeat="details in stdDetails |filter:userSearchText"  >
+					<td>{{$index + 1}}</td>
+					<td>{{details.name |uppercase}}</td>
+					<td>{{details.feePaid |currency:""}}</td>
+					<td>{{details.isBalExist}}</td>
+					<td>{{details.location}}</td>	
+					<td>{{details.dob |date:"dd/mm/yyyy"}}</td>
+					<td>{{details.gender}}</td>
+					
+				</tr>
+			</tbody>
+		</table><br>
+
+	{{stdDetails | json}}
+
+	</div>
+
+</body>
+</html>

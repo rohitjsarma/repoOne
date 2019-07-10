@@ -1,0 +1,39 @@
+{
+	"mobDetails": [
+		{
+			"name": "Vivo V9",
+			"ram": "4GB RAM",
+			"pxl": "13Mega PXL",
+			"batr":"3000mah",
+			"price":"$1000",
+			"imageurl": "/images/vivo.png"
+		},
+		{
+			"name": "OPPO F5 Youth ",
+			"ram": "6GB RAM",
+			"pxl": "13Mega PXL",
+			"batr":"3500mah",
+			"price":"$2000",
+			"imageurl": "/images/oppo.png"
+		},
+		{
+			"name": "Apple iPhone 7",
+			"ram": "8GB RAM",
+			"pxl": "13Mega PXL",
+			"batr":"4000mah",
+			"price":"$5000",
+			"imageurl": "/images/applem.png"
+		},
+		{
+			"name": "Samsung Galaxy J7 ",
+			"ram": "8GB RAM",
+			"pxl": "13Mega PXL",
+			"batr":"4000mah",
+			"price":"$3600",
+			"imageurl": "/images/samsung.png"
+		},
+		
+	
+
+	]
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Creating Blocks</title>
+	<style type="text/css">
+		.block1{
+			border: 2px solid green;
+			height: 10px;
+			text-align: center;
+			color: red;
+			background-color: #fff;
+			padding: 10px;
+			margin: 10px;
+		}
+		.block2{
+			border: 2px solid orange;
+			height: 10px;
+			text-align: center;
+			color: green;
+			background-color: #fff;
+			padding: 10px;
+			margin: 100px;
+
+		}
+	</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<div>
+		<input type="button" name="btn1" value="createBlock" onclick="createBlock()" >
+		<input type="button" name="btn2" value="showMessage" onclick="showMessage()">
+	</div>
+	<script type="text/javascript">
+		function createBlock() {
+			var divElement=document.createElement('div');
+			divElement.setAttribute('class','block1');
+			document.querySelector("#div1").appendChild(divElement);
+			var divElement=document.createElement('div');
+			divElement.setAttribute('class','block2');
+			document.querySelector("#div2").appendChild(divElement);
+		}
+
+		function showMessage(){
+			document.querySelector('.block1').innerHTML="hello there WELCOME";
+		    document.querySelector(".block2").innerHTML="hello";
+
+		}
+	</script>
+
+</body>
+</html>

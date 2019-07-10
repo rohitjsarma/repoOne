@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>
+			Demonstrating inheritance between two dynamic objects.
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function schoolDetails(obj) {
+				this.schlname = obj.name;
+				this.loc = obj.location;
+				this.rating = obj.rating;
+				this.displaySchoolDetails = function(){
+					console.log("School name is " + this.schlname);
+					console.log("Loaction is " + this.loc);
+					console.log("Rating" + this.rating);
+				}
+			}
+
+			function studentDetails(obj) {
+				this.sname = obj.name;
+				this.sage = obj.age;
+				this.displayStudentDetails = function() {
+					console.log("Student details");
+					console.log("Studet name  " + this.sname);
+					console.log("age" + this.sage);
+					this.displaySchoolDetails();
+				}
+			}
+			studentDetails.prototype = new schoolDetails({name:'ABC School', location:'Hyderabad', 'rating': '4/5'});
+
+			var s1= new studentDetails({name:'PRASAD', age: 50});
+			s1.displayStudentDetails();
+		</script>
+	</body>
+</html>

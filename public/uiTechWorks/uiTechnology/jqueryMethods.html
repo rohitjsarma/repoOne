@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jqueyMethods</title>
+		<script type="text/javascript" src="../../../../jQuery/jquery.js"></script>
+		<style type="text/css">
+			.block {
+				background: violet;
+				border: 2px solid;
+				height: 200px;
+				width: 100px;
+				float: right;
+			
+			}
+			table, td, tr, thead, th {
+				border: 1px solid;
+			}
+			.highlight {
+				background:yellow;
+				width: 100px;
+				height: 50px;
+			}
+			.div4{
+				
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" value="APPLY" id="ursBtn">
+		<p>
+			Item1
+		</p>
+		<div>
+			<span>Item 2</span>
+		</div>
+		<p>
+			<span>Item 3</span>
+		</p>
+		<div class="div4">
+			<span>Item 4</span>
+		</div><br>
+		<input type="text">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="radio">
+
+		<div class="block">
+				BLOCK Content
+			</div><br>
+			<div class="tab ">Hello</div><br>
+			<input type="text" id="uname">
+		</table>
+        <script type="text/javascript">
+        	//$('.block').html("hello");
+        	//$('div').append('span');
+        	//$('div').addClass('divclass');
+        	//$('div').removeClass("block");
+        	$('.block').show();
+        	$('.block').hide();
+            $('.block').show();
+           /* if ($("div").hasClass('tab')) {
+					alert($(".tab").text());
+				}*/
+
+			//$('.tab').text("hello text");
+
+			/*alert($("#uname").val());
+			$("#uname").val("Hello all");
+			*/	
+			//adding dynamic event using "on" method
+			/*$("#ursBtn").on({
+				'click': function() {
+					console.log('click got fired');
+				},
+				'mouseover': function() {
+					console.log('Mouseover got fired');
+				},
+				'mouseout' :function(){
+					console.log('mouseout got fired');
+				}
+			})*/
+			//------------------------------------------------------
+			//Directly Add event to an element by calling event method
+			/* $("#ursBtn").click(function(event){
+				applyProp();
+			});*/ 
+			/* $('#ursBtn').dblclick(function(event){
+			 	applyProp();
+			 })*/
+			// $('.block').toggleClass("hello");
+
+			 function applyProp() {
+			 	alert('heloo');
+			 	$(".block").toggle();
+
+			 }
+
+
+
+
+
+        </script>
+
+	</body>
+</html>

@@ -1,0 +1,155 @@
+.title {
+	text-align: center;
+	border: 1px solid;
+	margin: 5px;
+	padding: 5px;
+	text-align: center;
+	background-color: lightblue;
+	color: orange;
+	font-size:50;
+	font-weight: bolder;
+}
+li {
+	list-style: none;
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid green;
+	border-radius: 10px;
+	box-shadow: 10px 10px red;
+}
+ul {
+	width: 200px;
+	background: #fff;
+	padding: 20px;
+	float: left;
+}
+
+.loadingBlock {
+	display: none;
+			}
+.loadingBlock img {
+	width: 150px;
+	height: 120px;
+	position: absolute;
+	top: 30%;
+	left: 40%;
+				
+	}
+.errBlock {
+	color: red;
+	margin: 100px;
+	text-align: center;
+	font-size: 25px;
+	display: none;
+		}
+img{
+	width: 50px;
+	height: 100px;
+
+	}
+
+button{
+	color: green;
+	border: 1px solid red;  
+	background-color: yellow;
+	}
+
+.row{
+	width: 100%;
+	border: 2px solid white;
+	background-color: orange;
+}
+.ttlimg{
+	padding: 5px;
+	margin: 5px;
+	height: 4em;
+	width: 8em;
+}
+
+
+
+.Search {
+    padding: 0 16px;
+    border-radius: 2px 0 0 2px;
+    border: 0 none;
+    outline: 0 none;
+    font-size: 18px;
+    height: 36px;
+    width: 50%;
+	display: inline-block;
+	position: relative;
+	bottom: 35px;
+}
+.btns{
+	border: none;
+	font-size: 25px;
+	background-color: transparent;
+}
+
+#crtImg{
+	height: 3em;
+	width: 6em;
+	position: relative;
+	float: right;
+	top: 14px;
+	bottom: 48px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #CCC;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 5px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: yellow}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+   
+}
+
+.dropdown:hover .btns {
+    background-color: orange;
+}
+
+
+img:hover {  
+	transform: scale(1.5); 
+ 
+   }
+ img{
+
+    padding: 5px;
+    transition: transform .1s;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+ #prdcount{
+	float: right;
+	position: relative;
+	top: 2px;
+	right:25px;
+	font-size: 25px
+
+}
+
+
+
+
+
+

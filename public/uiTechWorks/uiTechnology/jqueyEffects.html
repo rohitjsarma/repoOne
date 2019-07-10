@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>different effects of jquery...</title>
+		<script type="text/javascript" src="../../../../jQuery/jquery.js"></script>
+		<style type="text/css">
+			.block1 ,.block2 ,.block3{
+				height: 200px;
+				width: 250px;
+				color: green;
+				background-color: orange;
+				border: 1px solid black;
+				float: left;
+				margin: 5px;
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="block1">content1 using sliding up and down</div>
+		<div class="block2">content2 using fadeinOUT</div>
+		<div class="block3">content3</div>
+		<input type="button" name="" value="SlideupDoown" onclick="slideup()">
+		<input type="button" name="" value="fadeIn" onclick="fadein()">
+		<input type="button" name="" value="Fadeout" onclick="fadeout()">
+		<script type="text/javascript">
+			function slideup() {
+				$(".block1").slideUp(5000, function(){
+					$(".block1").slideDown(1000)
+						});
+			}
+		
+			function fadein() {
+				$(".block2").fadeIn(5000, function(){	});
+			}
+			function fadeout() {
+				$(".block2").fadeOut(5000, function(){   });
+			}
+		</script>
+
+	</body>
+</html>

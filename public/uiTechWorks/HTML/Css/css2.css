@@ -1,0 +1,93 @@
+h1{
+	color: blue;
+	text-align: center;
+	border:5px solid red;
+	border-radius: 5px;
+	border-style: double;
+	background-color: yellow
+	
+
+}
+p.italic{
+	font-style: italic;
+	font-size: 15px;
+
+}
+p.oblique{
+	font-style: oblique;
+	font-size: 20px;
+}
+p.normal{
+	font-size: 2em;
+	font-variant: small-caps;
+}
+button:hover{
+	color: hotpink;
+	background-color: green;
+
+}
+button:visited{
+	color: purple;
+}
+button:active{
+	color: red;
+}
+ol{
+	border: 3px dashed green;
+	margin-left: 20px;
+	
+	
+}
+.ol1{
+	background-color: pink;
+    padding: 5px;
+    margin: 5px;
+}
+
+ul{
+	border-radius: 5px ;
+	border: 3px solid hotpink;
+	margin-left: 20px;
+	
+}
+.ul1{
+	background-color: yellow;
+    padding: 5px;
+    margin: 5px;
+}
+table{
+	border:2px solid black;
+	text-align: center;
+	padding: 2px;
+	margin: 20px;
+	width: 50%;
+	margin-top: 50px;
+	position: relative;
+	left: 25%;
+
+}
+th,tr,td{
+	border:2px solid hotpink;
+    padding: 2px;
+	margin: 2px;
+	border-collapse: collapse;
+
+}
+/*
+tr:nth-child(1){
+    background-color: powderblue;
+}
+td:nth-child(even){
+	background-color: skyblue;
+	color: black;
+}
+td:nth-child(odd){
+	background-color: magenta;
+	color: black;
+}*/
+
+tr:nth-child(odd){background-color: pink}
+tr:nth-child(even){background-color: hotpink}
+th{
+	background-color: hotpink;
+}

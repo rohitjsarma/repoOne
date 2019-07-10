@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>studentDetailsWithReturning_A_Value</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function getTotalAvg(marks) {
+	               var total=0;
+	               var avg=0;
+	               console.log(marks);
+	               for (var i = 0; i < marks.length; i++) {
+	               	total = total + marks[i];
+	               }
+	               
+	               	              	
+	               	avg = total/marks.length;
+	               	console.log(avg);
+	               	var temp = [total,avg];
+	               	return temp;
+	               	console.log(temp);
+  			   }
+  			
+
+               function displayGrade(avg) {				
+				if (avg < 40) {
+					console.log("You have a Surprise");
+				} else {
+					console.log("You Passed");
+					if (avg > 90) {
+						console.log("Got First class");
+					} else {
+						console.log("Got Second class");
+					}
+				}
+			}
+			function displayData(){
+				var sname="prasad";
+				var sage = 25;
+				var gender= "male";
+				var location1 ="hyderabad";
+				var marks = [40,55,65,78,90];
+
+				displayGrade(avg);
+
+				var values = getTotalAvg(marks);			
+				var total  = values[0];
+				var avg    = values[1];
+			
+				console.log("student name is " +sname);
+				console.log("student age is " +sage);
+				console.log("student gender is " +gender);
+				console.log("student location is  " +location1);
+				console.log("student total marks " +total);
+				console.log("student total average " +avg);
+			
+			}
+			displayData();
+               		
+			
+	
+		</script>
+
+	</body>
+</html>

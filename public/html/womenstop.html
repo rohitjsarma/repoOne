@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>dealOceanHome</title>
+		<link rel="stylesheet" type="text/css" href="../css/womenstop.css">
+
+		<script type="text/javascript" src="../jQuery/jquery.js"></script>
+		<script type="text/javascript" src="../jQuery/jquery.loadTemplate-1.4.4.min.js"></script>
+        <script type="text/javascript" src="../js/angular.min.js"></script>
+		<script type="text/javascript" src="../js/womenstop.js"></script>
+	
+	
+	</head>
+	<body  ng-app="httpApp" ng-controller="httpCntrl"  >
+		  <div id="prdcount"></div>
+		<div class="row">
+			<a href="http://localhost:8081/html/home.html">
+			<img width="110" src="../images/d.png" alt="Dealocean" title="Dealocean" class="ttlimg"/>
+			</a>
+			<img src="../images/cart.jpg" id="crtImg" class="ttlimg">
+		
+			<input type="text" value="" class="Search" title="Search for products, brands and more" name="q" autocomplete="off" placeholder="Search for products, brands and more">
+			
+		</div>
+		<div >
+	
+			<span class="dropdown">
+			<input type="button" class="btns" value="Electronics" id="elct" name="Electronics">&nbsp&nbsp&nbsp&nbsp
+				  <span class="dropdown-content">
+				  	<a href="http://localhost:8081/html/laptops.html">Laptop</a>
+				    <a href="http://localhost:8081/html/mobileDetails.html">Mobile</a>
+				    <a href="#">Mobile Accessories </a>
+				    <a href="#">Camera </a> 
+				  </span>
+            </span>
+	    
+			<span class="dropdown">
+		<input type="button" class="btns" value="Appliances" id="appl" name="Appliances">&nbsp&nbsp&nbsp
+			<span class="dropdown-content">
+				    <a href="#">Television</a>
+				    <a href="#">Refrigerator </a>
+				    <a href="#">Washing Machine</a>
+				    <a href="#">Kitchen Appliances </a> 
+				</span>
+		    </span>
+		
+			<span class="dropdown">
+			<input type="button" class="btns" value="Man" id="man1" name="Man">&nbsp&nbsp&nbsp
+			<span class="dropdown-content">
+				    <a href="#">Footwear</a>
+				    <a href="http://localhost:8081/html/mensTop.html">Top Wear </a>
+				    <a href="#">Bottom Wear</a>
+				    <a href="#">Sports Wear </a> 
+				    <a href="#">Men's Grooming </a>
+				</span>
+
+			</span>
+			
+			<span class="dropdown">
+			<input type="button" class="btns" value="Women" id="wman1" name="Women">&nbsp&nbsp&nbsp
+			<span class="dropdown-content"> 
+				    <a href="#">Top Wear </a>
+				    <a href="#">Footwear</a>
+				    <a href="#">Bottom Wear</a>
+				    <a href="#">Western Wear </a>
+				    <a href="#">Sports Wear </a>  
+				    <a href="#">Beauty & Grooming </a>
+				</span>
+
+			</span>
+			
+	<span class="dropdown">
+		<input type="button" class="btns" value="Baby" id="baby" name="Baby">&nbsp&nbsp&nbsp
+			<span class="dropdown-content">
+				    <a href="#">Kids Cloting</a>
+				    <a href="#">Toys </a>
+				    <a href="#">Kids Footwear</a>
+				    <a href="#">Boys Clothing </a>
+				    <a href="#">Baby Cares </a>
+			</span>  
+				    
+	</span>
+
+			<span class="dropdown">
+			<input type="button" class="btns" value="Home & Furniture" id="hmFur" name="Home & Furniture">&nbsp&nbsp&nbsp
+			<span class="dropdown-content">
+				    <a href="http://localhost:8081/html/offer.html">Kitchen </a>
+				    <a href="#">Furniture </a>
+				    <a href="#">Furnishing</a>
+				    <a href="#">Home Decor </a>
+				    <a href="#">Baby Cares </a>  
+				    
+				</span>
+
+			</span>
+
+		<span class="dropdown">
+		<input type="button" class="btns"  value="Books & More" id="bks" name="Books & More">&nbsp&nbsp&nbsp
+		      <span class="dropdown-content">
+				    <a href="#">Books </a>
+				    <a href="#">Gaming  </a>
+				    <a href="#">Music</a>
+				    <a href="#">Tv Show </a>
+				    <a href="#">Cricket </a>  
+				    
+				</span>
+		    </span>
+			
+			<span class="dropdown">
+			<input type="button" class="btns" value="Offer Zone" id="ofrzn" name="offer">&nbsp&nbsp&nbsp
+			<span class="dropdown-content">
+				    <a href="#">Books </a>
+				    <a href="#">Gaming  </a>
+				    <a href="#">Music</a>
+				    <a href="#">Tv Show </a>
+				    <a href="#">Cricket </a>      
+				</span>
+			</span>
+		
+		<span class="dropdown">
+			<input type="button" class="btns" value="Orders" id="ordr" name="Orders">&nbsp&nbsp&nbsp
+			</span>
+	<!-------------------------------------------------->
+	<button ng-click="loadProdData($event)">Get Data</button>
+
+		<div class="loadingBlock" ng-show="showLBlock">
+			<img src="../images/spinner.gif" />
+		</div>
+		<div class="errBlock" ng-show="shwErr">
+			Error while communicating to the server.
+		</div>
+
+		<div class="block" ng-repeat="pitem in prodDetails">
+			<ul>
+				<li>
+
+				<img src="{{pitem.image}}" /><br/>
+				<span><b>{{pitem.pattern}}</b></span><br>
+				Price:<span> {{pitem.price}}</span><br/>
+				<span>{{pitem.manufacturer}}</span><br/>
+				<button>Buy Now</button>
+				<button id="cnt" onclick="addCart(event)">Add to Cart</button></li><br>
+				
+				</li>
+
+			</ul>
+		</div>
+		<script type="text/javascript">
+	            var count=0;
+			    function addCart(event) {   
+				count += 1;
+				console.log(count);
+				console.log(event);
+				event.target.disabled=true;
+			 document.getElementById("prdcount").innerHTML=count;
+			}
+		</script>
+		
+		
+	 
+	</body>
+	</html>

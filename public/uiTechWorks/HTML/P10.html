@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>regForm</title>
+</head>
+<body style="background-color: powderblue;">
+	<h1 style="color: red;background-color: yellow;border: 2px;text-align: center;">Registration Form</h1>
+	<form method="post">
+		<fieldset>
+		<legend>Personal Information</legend>
+		Name :<br>
+		<input type="text" name="name" value ="fullName"  autofocus><br>
+		City :<br>
+		<input type="text" name="city" maxlength="11" placeholder="city"><br>
+		<br>
+		</fieldset>
+		
+		
+	</form>
+	<br>
+	<br>
+	<form>
+		Select the Course :
+		<select  name="Course" >
+			<option>JAVA </option>
+	        <option>Ruby</option>
+		    <option selected="Python">Python</option>
+		    <option>Big Data</option>
+		    <option>Hadoop</option>
+		    <option>Adv Java</option>
+		    <option>Spring</option>
+		</select>
+		<br>
+		<br>
+		Select Gender :<br>
+		<input type="radio" name="gender" value="Male">Male
+		<input type="radio" name="gender" value="Female">Female
+		<input type="radio" name="gender" value="Others">Others<br><br>
+        </form>
+
+			 <form >
+			 	Select from the list :
+			  <input list="browsers" name="browser">
+			   <datalist id="browsers">
+				    <option value="Internet Explorer">
+				    <option value="Firefox">
+				    <option value="Chrome">
+				    <option value="Opera">
+				    <option value="Safari">
+			   </datalist>
+			  
+			</form><br>
+	<form >
+		<label>
+		<textarea  name="message" rows="10" cols="30">write here</textarea>
+	</label>
+	</form><br>
+	<h2>The Button Element</h2>
+
+		<button type="button" onclick="alert('Thanks for submitting !')">Submit</button>
+
+
+
+
+</body>
+</html>

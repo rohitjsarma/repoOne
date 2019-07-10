@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>nestedIf</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var sname='rohit';
+			var sage=25;
+			var m1=20,m2=30,m3=70;
+			var total =m1+m2+m3;
+			var avg = total/3;
+			console.log("student name is "+sname);
+			console.log("student age is " +sage);
+			console.log("Total marks " +total);
+			console.log("Avg marks is " +avg);
+			if (avg>=40){
+				console.log("student is passed");
+			  if (avg>=60) {
+				console.log("student get first divison");
+				if (avg>=75) {
+					console.log("student get Distinction");
+
+				}
+				}else{
+					console.log("Student get Second class");
+				}
+			}else{
+				
+					console.log("student is failed");
+				}
+
+							
+		</script>
+	</body>
+</html>

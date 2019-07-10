@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>bankingModel</title>
+		<script type="text/javascript" src="../../js/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="multiCntrl.css">
+		<script type="text/javascript" src="multiCntrl.js"></script>
+	</head>
+	<body ng-app="myapp"  >
+	
+
+		<div ng-controller="c1">
+		<h1>ABC InternetBanking</h1>
+		<div class="block1">
+			<h2>Ammount WithDraw Block</h2>
+		<div class="balBlock" >
+			Total Balance in Account:<span class="balance">${{totalBalance}}</span>
+		</div>
+		<div  class="wdraw">
+		Give Withdraw Ammount : <input type="number" name="" ng-model=wthdrwAmnt>
+		<input type="button" name="" value="Withdraw" ng-click="withdrawFun()" id="btn">
+		</div>
+		
+		<div class="successMsg" ng-show="scsMsg">
+			{{successMsg}}
+		</div>
+		</div>
+		</div>
+		<!----------------------------------------------->
+		<div ng-controller="c2">
+		<div class="block2">
+			<h2>Ammount WithDraw Block</h2>
+		<div class="balBlock" >
+			Total Balance in Account:<span class="balance">${{totalBalance}}</span>
+		</div>
+		<div  class="dpst">
+		Give Deposit Ammount : <input type="number" name="" ng-model=dpstAmnt>
+		<input type="button" name="" value="Deposit" ng-click="depositFun()" id="btn">
+		</div>
+		
+		<div class="successMsg" ng-show="dpSscsMsg">
+			{{dpsuccessMsg}}
+		</div>
+		</div>
+	    </div>
+	        <div >
+			Transaction Statement: {{transactionTrack}}
+			</div>
+		
+
+
+
+
+	</body>
+</html>

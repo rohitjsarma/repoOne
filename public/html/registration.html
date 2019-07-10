@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SignIn</title>
+		<link rel="stylesheet" type="text/css" href="../css/registration.css">
+	    <script type="text/javascript" src="../js/registration.js"></script>
+	</head>
+	<body>
+	   <form method="post" action="https://www.dealocean.php" target="_blank">
+       <div class="block">
+		
+		<h1>Create Account</h1><br>
+	    
+	   
+		<b>Your name</b><br> 
+		<input type="text" name="name" maxlength="50"  id="uname"><br>
+		<div class="errMsgUname">User Name is mandatory</div>
+	    
+		<b>Mobile number</b><br>
+		<input type="text" name="mobile" maxlength="10"  placeholder="Only numbers allowed" id="mob" 
+		onkeypress ="return validationMob(event)"><br>
+		<div class="errMob">Mobile no is mandatory</div>
+		<b>Email address</b><br></form>
+		<input type="text" name="email" required="" id="mail"></body><br>
+		<b>Password</b><br>
+		
+		<input type="Password" name="signInPassword" placeholder="At least six character"  id="pswd"><br>
+		<b>ReEnter Password</b><br>
+        <input type="Password" name="signInPassword" placeholder="Password should be matching"  id="rpswd"><br>
+        <div class="errMsgPswd">Password & ReEnter Password Must Match</div>
+     
+		
+		<p style="color: green"><cite>We will send you a text to verify your phone.</cite></p>
+		<hr>
+		<br>
+
+        
+		<input type="Submit" name="button" value="Continue" onclick= "readUserDetails()" >
+		</div>
+		<div class="divide"></form>
+			Already have an account ? <a href="signin.html" target="_blank">SignIn</a>
+		</div><br>
+		
+		<br>
+		<div class="sclbtn">
+        <button class="social"> <a href="https://www.facebook.com/" class="fb" target="_blank">Login with Facebook </a></button><br>
+        <br>
+        <button class="social"><a href="https://www.twitter.com/" class="twitter" target="_blank">Login with Twitter </a><br></button><br> 
+        <br>
+        <button class="social" ><a href="https://plus.google.com/" class="google">Login with Google+</a></button>
+        </div>
+     
+	    
+		
+	</body>
+</html>

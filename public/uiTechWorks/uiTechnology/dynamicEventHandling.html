@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>dynamicEvenHandling</title>
+		<style type="text/css">
+			.parent{
+				height: 400px;
+				width: 240px;
+				background-color: orange;
+				border: 2px solid;
+				text-align: center;
+			}
+			.child{
+				height: 200px;
+				width: 120px;
+				background-color: yellow;
+				border: 2px solid;
+				margin: 10px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+       <input type="button" id="btn1" value="click">
+       <input type="button" id="btn2" value="Try">
+       </div>
+      <div> 
+       Select one :<select onchange="setEvent()" id="userOption">
+       
+       	<option>button1</option>
+       	<option>button2</option>
+        
+       </select><br><br>
+       </div>
+       <div class="parent">Parent
+       <div class="child">child</div>
+       </div>
+
+	</body>
+	<script type="text/javascript">
+		function setEvent() {
+			var userOption =document.querySelector("#userOption").value;
+			if (userOption == 'button1') {
+					document.querySelector("#btn1").addEventListener("click", function(){
+						console.log("HELLO button 1");
+					});
+				} else {
+					document.querySelector("#btn2").addEventListener("click", function(){
+						console.log("HELLO button 2");
+					});
+				}
+			}
+			document.querySelector(".parent").addEventListener("click", function(){
+				console.log("PARENT EVENT FIRED");
+			}, true);
+
+			document.querySelector(".child").addEventListener("click", function(){
+				console.log("CHILD EVENT FIRED");
+			}, true);
+		
+	</script>
+</html>

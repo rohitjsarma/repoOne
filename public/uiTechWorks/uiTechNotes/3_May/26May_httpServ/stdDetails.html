@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>
+			Demonstrating proddetails.
+		</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<script type="text/javascript" src="stdApp.js"></script>
+		<style type="text/css">
+			li {
+				list-style: none;
+				border: 1px solid;
+				background: #ccc;
+				margin: 5px;
+				padding: 10px;
+			}
+			ul {
+				border: 2px solid;
+				background: #fff;
+				width: 35 0px;
+				margin: 30px;
+				padding: 20px;
+
+			}
+		</style>
+	</head>
+	<body ng-app="stdDetailsApp">
+		<div ng-controller="stdDetailsCntrl">
+			<div>
+				<ul>
+					<li>
+						Enter studnet Dtails: <input type="text" ng-model="sDetails.sname">
+					</li>
+					<li>
+						Enter password: <input type="password" ng-model="sDetails.spwd">
+					</li>
+					<li>
+						Country: 
+						<select ng-model="sDetails.address.present.scountry">
+							<option value="ind">India</option>
+							<option value="chn">China</option>
+							<option value="jap">Japan</option>
+							<option value="us">USA</option>
+						</select>
+					</li>
+				</ul>
+				Student detail: {{sDetails}}
+			</div>
+		</div>
+
+
+		
+	</body>
+</html>

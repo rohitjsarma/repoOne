@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Angular forms.
+		</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"> </script>
+		<style type="text/css">
+			input.ng-invalid {
+				color: : red;
+				border-color: red
+			}
+			input.ng-valid {
+				color: green;
+				border-color: green
+			}
+			ul {
+				border: 2px solid;
+				background: #ccc;
+				width: 500px;
+				margin: 40px auto;
+			}
+			li {
+				border: 1px solid;
+				background: #fff;
+				margin: 10px;
+				padding: 10px;
+				list-style: none;
+			}
+			.errmsg {
+				margin: 5px;
+				color: red;
+			}
+			.mandtry {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div ng-app="formApp" ng-controller="formAppCntrl">
+			<form action="http://www.testingpage.com/senddata" method="GET" novalidate name="userDetails">
+				<ul>
+					<li>
+						Enter user name:
+						<span class="mandtry" ng-show="userDetails.uname.$invalid && userDetails.uname.$touched">*</span>
+						<input type="text" name="uname" ng-model="details.uname" required>
+						<div class="errmsg" ng-show="userDetails.uname.$invalid && userDetails.uname.$touched">
+							User name is mandatry
+						</div>
+					</li>
+					<li>
+						Enter account Pwd:
+						<input type="password" >
+					</li>
+					<li>
+						Enter User Age:
+						<input type="number" name="uage" ng-model="details.uage" required>
+
+						<div class="errmsg" ng-show="userDetails.uage.$invalid">
+							Enter valid age value.
+						</div>
+					</li>
+					<li>
+						<input type="submit" value="Register" ng-disabled="userDetails.$invalid">
+					</li>
+				</ul>
+			</form>
+			{{userDetails | json}}
+		</div>
+		<script type="text/javascript">
+			var app = angular.module("formApp", []);
+			app.controller("formAppCntrl", function($scope){
+
+			});
+		</script>
+	</body>
+</html>

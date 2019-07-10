@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>primeNoForLoop</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var sum= 0;
+			for(var n=3;n<=100;n++){
+				var count = 0;
+				var i;
+				for(i=1;i<=n;i++){
+					count++;
+				}
+				if(count>2){
+					break;
+				
+
+				}
+			}
+			console.log(count);
+			if(count==2){
+				console.log(n+ " is prime no");
+				sum+=n;
+			}else{
+				console.log(n+" is not primeno");
+			}
+		
+		console.log('sum of all primeno is' +sum);
+		</script>
+
+	</body>
+</html>

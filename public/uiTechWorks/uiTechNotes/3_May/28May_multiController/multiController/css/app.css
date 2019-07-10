@@ -1,0 +1,36 @@
+.title {
+	text-align: center;
+	color: green;
+	font-size: 17px;
+	margin: 5px;
+	padding: 5px;
+	text-decoration: underline;
+}
+
+.block {
+	background: #ccc;
+	margin: 5px;
+	padding: 5px;
+	border: 2px solid #ddd;
+	border-radius: 10px;
+	text-align: center;
+}
+.subtitle {
+	text-decoration: underline;
+	 color: blue;
+	 margin: 10px;
+}
+
+.tbalance {
+	text-align: right;
+	color: green;
+}
+.bal {
+	color: red;	
+}
+
+.successMsg {
+	text-align: center;
+	color: green;
+	margin: 10px;
+}

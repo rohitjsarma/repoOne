@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>
+			Demonstrating functions with params and return value.
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			function addValues(a1, a2) { //argument name can be any thing!
+				var result = a1 + a2;
+				return result;
+			}
+			function readValues() {
+				var firstVal, secondVal;
+				firstVal = prompt("enter first value");
+				secondVal = prompt("enter second value");
+				firstVal = parseInt(firstVal);
+				secondVal = parseInt(secondVal);
+				var res = addValues(firstVal, secondVal);
+				console.log("REsult value is " + res);
+			}
+			
+			readValues();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>localAndlocalStorage</title>
+		<script type="text/javascript" src="../../../../jQuery/jquery.js"></script>
+		<style type="text/css">
+			.wlcmblock{
+				display: none;
+				color: red;
+			}
+			.clropt{
+				float: right;
+
+			}
+		</style>
+	</head>
+	<body>
+		Enter your name :&nbsp<input type="text" name="" onclick="readValue()" id="name">
+		<div class="wlcmblock">Welcome to this page Mr  :<span id="uname"></span></div>
+		Select color :&nbsp<select id="clropt" onchange="setColor()">
+			<option>red</option>
+			<option>lightgreen</option>
+			<option>yellow</option>
+			<option>Violet</option>
+			<option>magenta</option>
+		</select>
+		<button onclick="readValue()">Click Here</button>
+		<script type="text/javascript">
+			if(localStorage.getItem('usname')!=null);
+				var storedName=localStorage.getItem('usname');
+				$('#uname').html(storedName);
+				$(".wlcmblock").show(1000)
+			if(localStorage.getItem('usrColor')!=null);
+				var storedColor=localStorage.getItem('usrColor');
+				$("body").css("background", storedColor);
+
+			function readValue() {
+				
+                var username=$('#name').val();
+                $('#uname').html(username);
+                $('.wlcmblock').show();
+				localStorage.setItem("usname",username);
+			}
+			function setColor() {
+				var color=$('#clropt').val();
+				$('body').css("background",color);
+				localStorage.setItem("usrColor",color);
+			}
+		</script>
+
+	</body>
+</html>

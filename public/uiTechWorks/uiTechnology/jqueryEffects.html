@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	        <title>
+				Demonstrating Jquery Effects show/hide
+			</title>
+			<script type="text/javascript" src="../../../../jQuery/jquery.js"></script>
+			<style type="text/css">
+				.block{
+						width: 200px;
+						height: 200px;
+						border: 2px solid green;
+						text-align: center;
+						background: orange;
+						color: yellow;
+				   }
+
+			</style>
+	</head>
+	<body>
+		<div class="block">
+			product name:samsung
+			product price:$500
+		</div><br>
+		<input type="button" value="Show" onclick="addEffects()">
+
+		<input type="button" value="Hide" onclick="hide()">
+
+		<input type="button" value="Toggle" onclick="toggle()">
+
+		<script type="text/javascript">
+			function addEffects() {
+					
+					$(".block").show(5000, function(){
+				     });
+				}
+				function hide(){
+					$(".block").hide(1000,function(){
+
+					})  
+				}
+				function toggle(){
+					$(".block").toggle(1000,function(){
+
+					})  
+				}
+						
+							
+			
+		</script>
+
+	</body>
+</html>

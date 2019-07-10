@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>Demonstrating HTML5 Local and Session Storage Objects</title>
+		<script type="text/javascript" src="../../../../jQuery/jquery.js"></script>
+		<style type="text/css">
+			#wlcmBlock {
+				color: green;
+				font-size: 20px;
+				display: none;
+				padding: 10px;
+				margin: 10px;
+				text-align: center;
+			}
+			.thmeBlock {
+				float: right;
+				margin: 10px;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="thmeBlock">
+			<select id="themeval" onchange= applyTheme()>
+				<option>Red</option>
+				<option>lightGreen</option>
+				<option>lightBlue</option>
+				<option>Yellow</option>
+
+			</select>
+		</div>
+		<div>
+			Enter you name: 
+			<input type="text" id="uName"> <input type="button" value="Enter" onclick="readValues()">
+		</div>
+		<div id='wlcmBlock'>
+			Welcome to you our page Mr <span id="duname"></span>
+		</div>
+		<script type="text/javascript">
+			if (sessionStorage.getItem('user_name') != null) {
+				var storedUname = sessionStorage.getItem('user_name');
+				$("#duname").html(storedUname);
+				$("#wlcmBlock").show(1000);
+			}
+
+			if (sessionStorage.getItem("uColor") != null) {
+				var userApplydClr = sessionStorage.getItem("uColor");
+				$("body").css("background", userApplydClr);
+			}
+
+			$("#uName").val('');
+			function readValues() {
+				var userName = $("#uName").val();
+				$("#duname").html(userName);
+				$("#wlcmBlock").show(1000);
+				sessionStorage.setItem("user_name", userName);
+			}
+
+			function applyTheme() {
+				var userSelectedTheme = $("#themeval").val();
+				$("body").css("background", userSelectedTheme);
+				sessionStorage.setItem("uColor", userSelectedTheme);
+			}
+		</script>
+	</body>
+</html>

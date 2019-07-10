@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Custom Directives
+		</title>
+		<script type="text/javascript" src="../../../../js/angular.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<script type="text/javascript" src="../../../../jQuery/jquery.js"></script>
+		<link rel="stylesheet" type="text/css" href="app.css">
+	</head>
+	<body ng-app="dialogApp" >
+		<div class="dialogCntainer">
+		</div>
+		<div ng-controller="dialogCntrl">
+			Click the button to save Page
+			<div show-dialog id="test" title="Do you want to save?" type="ok"></div>
+			<div show-dialog id="test" title="Want to update files?" type="okcancel"></div>
+		</div>
+	</body>
+</html>

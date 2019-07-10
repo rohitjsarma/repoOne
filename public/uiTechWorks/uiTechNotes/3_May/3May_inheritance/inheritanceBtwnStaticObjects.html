@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>
+			Inheritance between Two static objects.
+		</title>
+		<style type="text/css">
+			#prodContainer {
+				border: 2px solid;
+				margin: 10px;
+				padding: 10px;
+				overflow: auto;
+				max-height: 500px;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div>
+			Demonstrating Inheritance btwn two static objects.
+		</div>
+		<div id="prodContainer">
+		</div>
+		<script type="text/javascript">
+			var sellerDetails = {
+				name: 'Indian electronics',
+				location: 'Hyderabad'
+			}
+			var prodDetails = {
+				name: 'laptop',
+				price: '300$',
+				manu: 'Samsung',
+				image: 'images/laptop.png',
+				trdemark: 'ISO2001',
+				displayDetails: function() {
+					var blockElement = document.createElement("div");
+					for (var key in prodDetails) {
+						
+						blockElement.setAttribute("class", "block");
+						if (typeof(prodDetails[key]) != 'function') {
+							console.log(key);
+							console.log(prodDetails[key]);
+							var divElement = document.createElement('div');
+							divElement.innerHTML = key + ' : ' + prodDetails[key];
+							blockElement.appendChild(divElement)
+						}
+					}
+					document.querySelector("#prodContainer").appendChild(blockElement);
+				}
+			};
+			prodDetails.__proto__ = sellerDetails;
+			prodDetails.displayDetails();
+
+
+		</script>
+	</body>
+</html>

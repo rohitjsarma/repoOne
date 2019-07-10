@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<style type="text/css">
+		th,td,table{
+			border: 1px solid green
+
+		}
+	</style>
+</head>
+<body ng-app ng-init="x=[10,20,30,40,50,60,70]">
+	<select>
+		<option ng-repeat="y in x">{{y}}</option>
+	</select><br></br>
+	<table cellspacing="4" cellpadding="5" style="border: 1px soloid red">
+		<thead>
+			<th>no</th><th>no</th><th>no</th><th>no</th><th>no</th><th>no</th><th>no</th>
+		</thead>
+		<tbody>
+			<td ng-repeat="z in x">{{z}}</td>
+		</tbody>
+	</table>
+
+</body>
+</html>

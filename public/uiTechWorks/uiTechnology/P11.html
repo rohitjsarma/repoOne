@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>registrationForm</title>
+		<style type="text/css">
+		.main{
+			border: 2px solid green;
+			text-align: center;
+			color: red;
+			margin: 5px;
+			padding: 5px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div class="main">Student Registration Form
+			<form  method="post" action="https://www.abcserver.com" target="_blank">
+			<fieldset style="text-align: left;">
+				<legend>Student Details</legend>
+				
+					Name:<input type="text" name="sname"><br>
+					<br>
+					sAge  :<input type="text" name="age"><br>
+					Select Gender :
+					Male :<input type="radio" name="gender">
+					Female :<input type="radio" name="gender"><br>
+					<br>
+					UserId :<input type="text" name="uid"><br>
+					<br>
+					Psword :<input type="password" name="Psword" maxlength="10" >
+				
+			</fieldset><br>
+			<fieldset style="text-align: left;">
+				<legend>Address</legend>
+				
+					House no:<input type="text" name="hno"><br>
+					<br>
+					Street no :<input type="text" name="sno"><br>
+					<br>
+					Country :<select>
+						<option>India</option>
+						<option>China</option>
+						<option selected="Bhutan">Bhutan</option>
+						<option>Nepal</option>
+						<option>Britain</option>
+						<option>Usa</option>
+					</select>
+				
+					State :<select>
+						<option >Bihar</option>
+						<option>Telangana</option>
+						<option selected="New Delhi">New Delhi</option>
+						<option>Maharastra</option>
+						<option>UP</option>
+					</select><br/>
+					<br>
+					Pin :<input type="text" name="pin">
+				
+			</fieldset><br>
+			<br>
+			<fieldset style="text-align: left;">
+				<legend>Educational Details</legend>
+				    <div>
+					Qualification:
+					MCA :<input type="radio" name="cousre">
+					MBA :<input type="radio" name="cousre">
+					MSC :<input type="radio" name="cousre">
+					Others :<input type="radio" name="cousre"><br>
+					</div>
+                    <br><div>
+					Language :
+					English :<input type="checkbox" name="lang">
+					Hindi:<input type="checkbox" name="lang">
+					Telgu:<input type="checkbox" name="lang">
+					Malyalam :<input type="checkbox" name="lang"><br><br/>
+					</div>
+					<label>Write About Yourself :</label>	
+			<textarea >Start from here ...!</textarea><br>
+				
+			</fieldset><br>
+			
+			<label>
+			<button type="Submit" onclick="alert('Thanx for submitting the form')">Submit</button>
+			</label>
+		    </form>
+		    </div>
+
+	</body>
+</html>

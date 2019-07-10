@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>
+			Demonstrating CSS Positions.
+		</title>
+		<style type="text/css">
+			.block {
+				border: 1px solid;
+				width: 120px;
+				height: 130px;
+				text-align: center;
+			}
+			.block1 {
+				background: green;
+				position: relative;
+			}
+			.block2 {
+				background: yellow;
+				left: 90px;
+				top: 180px;
+				position: fixed;
+				z-index: 1888;
+			}
+			.block3 {
+				background: red;
+				z-index: 2000;
+				position: relative;
+
+			}
+			.block4 {
+				position: relative;
+				background: purple;
+				top: -30px;
+				z-index: 999;
+			}
+			.block5{ 
+				background: grey;
+				position: absolute;
+				left: 43%;
+				top: 43%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="parent">
+			<div class="block block1">
+				Content 1
+			</div>
+			<div class="block block2">
+				Content 2
+			</div>
+			<div class="block block3">
+				Content 3
+			</div>
+			<div class="block block4">
+				Content 4
+			</div>
+
+			<div class="block block5">
+				Content 5
+			</div>
+		</div>
+	</body>
+</html>

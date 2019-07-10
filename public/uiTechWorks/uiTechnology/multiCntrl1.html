@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>multiControllersBroadcastServicing</title>
+	<script type="text/javascript" src="../../js/angular.min.js""></script>
+	<style type="text/css">
+		.block1,.block2{
+			border: 1px solid red;
+			margin: 5px;
+			padding: 5px;
+
+		}
+	</style>
+
+</head>
+<body ng-app="myapp" >
+	<script type="text/javascript">
+		angular.module("myapp",[])
+		.controller("c1",function($scope,$rootScope){
+			$rootScope.$broadcast("tbalanceupdte", $rootScope.totalbalance);
+			$rootScope.transactionTrack = [];
+			$scope.msg=true
+			$rootScope.totalbalance=300000
+			$scope.withdrawFun= function(){
+		    $rootScope.totalbalance -= $scope.withdrawAmnt
+			$scope.message="Transaction has done successfully"
+			var obj = {
+			Type: 'With Draw Amount',
+			Date: new Date(),
+			Total_Amount: $scope.wthdrwAmnt
+			}
+			$scope.transactionTrack.push(obj);
+			}
+
+		})
+		.controller("c2",function($scope,$rootScope){
+			$scope.$on("tbalanceupdte", function(event, args){
+		    $scope.totalBalance = args;
+	        });
+			$scope.dmsg=true
+			$rootScope.totalbalance=300000
+			$scope.depositFun= function(){
+			$rootScope.totalbalance += $scope.depositAmnt
+			$scope.dmessage="Transaction has done successfully"
+			}
+
+		})
+	</script>
+	<h1 style="text-align: center;color: green;">Bank Transaction </h1>
+	<div class="block1">
+	<div ng-controller="c1">
+	Total Balance is : <span>{{totalbalance}}</span><br>
+	Wthdraw an amount:<input type="number" name="" ng-model="withdrawAmnt">
+	<input type="button" name="" value="Withdraw" ng-click="withdrawFun()">
+	<div ng-show="msg">
+		{{message}}
+	</div>
+	</div>
+	</div>
+	<!--------------------------------------------->
+     <div class="block2">
+	<div ng-controller="c2">
+		Total Balance is : <span>{{totalbalance}}</span><br>
+	Deposit an amount:<input type="number" name="" ng-model="depositAmnt">
+	<input type="button" name="" value="Deposit" ng-click="depositFun()">
+	<div ng-show="dmsg">
+		{{dmessage}}
+	</div>
+	</div>
+    </div>
+            <div>
+			Trnsaction: {{transactionTrack}}
+			</div>
+
+
+
+</body>
+</html>

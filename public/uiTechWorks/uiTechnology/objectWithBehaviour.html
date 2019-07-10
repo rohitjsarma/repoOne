@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>objectWithBehaviours</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var sDetails= {
+				  sname:'Razz',
+				  age : 25,
+				  gender:'Male',
+				  marks:[35,45,60,50,30],
+				  total:0,
+				  avg :0,
+			    
+				stdDetails: function() {
+					console.log("The name is "+this.sname); //we can use object name instead of 'this' & viseversa.
+					console.log("The age is "+sDetails.age);
+					console.log("The Gender is "+this.gender);
+                    this.marksAndAvg();
+                    this.stdGrade();
+                 },
+
+                 marksAndAvg : function() {
+                
+                 	for (var i = 0; i < sDetails.marks.length; i++) {
+                 		sDetails.total  += sDetails.marks[i];
+                      	}
+                      	sDetails.avg=sDetails.total/sDetails.marks.length;
+                    console.log("Total marks is "+sDetails.total);
+                    console.log("The avg is "+sDetails.avg);
+                 },
+
+                 stdGrade:function (avg) {
+                 	 if (sDetails.avg>40) { //instead of sDetails we can use 'this' keyword.
+                 	 	console.log("you have passed");
+                 	 }else{
+                 	 	console.log("you have failed");
+                 	 }
+                 }
+             };
+
+                sDetails.stdDetails();
+
+			
+		</script>
+		
+
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>testnigClosures</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var a=10;
+			console.log(a);
+			var b=20;
+			function showMsg() {
+				console.log(b);
+				console.log("hello there");
+			}
+			showMsg();
+
+			var clsr= (function(){
+				console.log("closures get invoked");
+				var b=40;
+				console.log("the b value is "+b);
+				function showMsg1() {
+					console.log("b value inside function "  +b);
+				}
+				showMsg1();
+
+				function showMsg() {
+				console.log(a);
+				console.log("hello there");
+			   }
+
+				var obj =  {
+					bval: b,
+					aval:a,
+					showMsg1: function() {
+					  showMsg1();
+					},
+					showMsg:function(){
+					  	showMsg();
+					}
+				};
+				return obj;
+
+			})()
+			console.log(clsr);
+			clsr.showMsg1();
+			clsr.showMsg();
+		</script>
+
+	</body>
+</html>

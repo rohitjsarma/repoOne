@@ -1,0 +1,112 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Tables
+		</title>
+		<style type="text/css">
+			table, td, th {
+				border: 1px solid;
+				
+			}
+			.container {
+				width: 294px;
+				height: 300px;
+				border: 1px solid;
+				margin: 10px;
+			}
+			.row {
+				
+				border: 1px solid;
+				height:38px;	
+			}
+			.content, .heading {
+				float: left;
+				width: 53px;
+				border: 1px solid;
+				padding: 9px;
+			}
+			.heading {
+				font-weight: bolder;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			Student sdetails
+		</div>
+		<table cellspacing="10px" cellpadding="10px;">
+			<thead>
+				<tr>
+					<th>sno.</th>
+					<th>Name</th>
+					<th>Gender</th>
+					<th>Location</th>
+					<th>Percentage</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Raj</td>
+					<td>Male</td>
+					<td>Mumbai</td>
+					<td>50%</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Raj</td>
+					<td>Male</td>
+					<td>Delhi</td>
+					<td>50%</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Raj</td>
+					<td>Male</td>
+					<td rowspan="2">Hyd</td>
+					<td>50%</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Raj</td>
+					<td>Male</td>					
+					<td>50%</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="container">
+			<div class="row">
+				<div class="heading">Sno.</div>
+				<div class="heading">Name</div>
+				<div class="heading">Gender</div>
+				<div class="heading">Location</div>
+			</div>
+			<div class="row">
+				<div class="content">1</div>
+				<div class="content">DRAJ</div>
+				<div class="content">Male</div>
+				<div class="content">Hyd</div>
+			</div>
+			<div class="row">
+				<div class="content">1</div>
+				<div class="content">DRAJ</div>
+				<div class="content">Male</div>
+				<div class="content">Hyd</div>
+			</div>
+			<div class="row">
+				<div class="content">1</div>
+				<div class="content">DRAJ</div>
+				<div class="content">Male</div>
+				<div class="content">Hyd</div>
+			</div>
+			<div class="row">
+				<div class="content">1</div>
+				<div class="content">DRAJ</div>
+				<div class="content">Male</div>
+				<div class="content">Hyd</div>
+			</div>
+
+		</div>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Jquery Effects show/hide
+		</title>
+		<script type="text/javascript" src="../../../../jQuery/jquery.js"></script>
+		<style type="text/css">
+			.block {
+				width: 200px;
+				height: 200px;
+				border: 2px solid;
+				text-align: center;
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<input type="button" value="Show" onclick="addEffect('show')">
+			<input type="button" value="Hide" onclick="addEffect('hide')">
+			<input type="button" value="Toggle" onclick="addEffect('tog')">
+		</div>
+		<div class="block">
+			Content
+		</div>
+		<script type="text/javascript">
+			function addEffect(type) {
+				switch(type) {
+					case 'show':
+						$(".block").show(5000, function(){
+						});
+						break;
+					case 'hide':
+						// $(".block").hide(5000);
+						var width = 200;
+						var height = 200;
+						var hideEff = setInterval(function(){
+							width -= 5;
+							height -= 5;
+							$(".block").css({width: width + 'px',
+										 height: height + 'px'});
+							if (width == 0) {
+								clearInterval(hideEff);	
+								$(".block").css("display", "none");
+							}
+							
+						}, 200);	
+
+						break;
+					    case 'tog':
+						$(".block").toggle(500);
+						break;
+				}
+			}
+		</script>
+	</body>
+</html>
+

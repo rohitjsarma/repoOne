@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Objects in js
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			var studentDetails = {
+				name: "prasad",
+				name: "TEENA",
+				age: 40,
+				'gender': "Male",
+				"marks": [30, 40, 50],
+				total: 0
+			};
+			var ename = "TEENA";
+			var eage = 40;
+		
+			console.log("Student name is" + studentDetails['name']);
+			console.log("Student age is" + studentDetails.age);
+			console.log("Student gender is" + studentDetails.gender);
+			for (var i = 0 ;i < studentDetails.marks.length; i++) {
+				studentDetails.total += studentDetails["marks"][i];
+			}
+			console.log("Student total is" + studentDetails.total);
+
+		</script>
+	</body>
+</html>

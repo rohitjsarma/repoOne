@@ -1,0 +1,126 @@
+<html>
+	<head>
+		<title>
+			Demonstrating HTML5 Semantic Tags
+		</title>
+		<style type="text/css">
+			.topCntnr,
+			.btmCntnr {
+				left: 0;
+				right: 0;
+				padding: 5px;
+				position: absolute;
+				border: 1px solid;
+				text-align: center;
+			}
+			.btmCntnr {
+				bottom: 0;
+			}
+			.block {
+				border: 1px solid;
+				position: absolute;
+				top: 50px;
+				left: 10px;
+				right: 10px;
+				bottom: 50px;
+				overflow: auto;
+
+			}
+			.lblock, .rblock {
+				border: 1px solid;
+				margin: 10px;
+				background: #ccc;
+				overflow: auto;
+				float: left;
+				position: relative;
+
+			}
+			.lblock {
+				width: 30%;
+			}
+			.rblock {
+				width: 65%;
+			}
+			li {
+				list-style: none;
+				border: 1px solid;
+				background: #ccc;
+				margin: 5px;
+				padding: 5px;
+			}
+			ul {
+				background: #fff;
+			}
+			.content {
+				border: 1px solid;
+				height: 100px;
+				margin: 5px;
+				background: #fff;
+			}
+			studentdetails {
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="topCntnr">
+			Welcome to online shpng page.
+		</header>
+		<main class="block">
+			<aside class="lblock">
+				<ul>
+					<li>Item1</li>
+					<li>Item1</li>
+					<li>Item1</li>
+					<li>Item1</li>
+					<li>Item1</li>
+					<li>Item1</li>
+					<li>Item1</li>
+					<li>Item1</li>
+					<li>Item1</li>
+					<li>Item1</li>
+				</ul>
+			</aside>
+			<aside class="rblock">
+				<section>
+					<article class="content">
+						<studentdetails id="" st>
+							Sname: 'Raj'
+							sage: 40
+						</studentdetails>
+						<studentdetails id="" st>
+							Sname: 'Raj'
+							sage: 40
+						</studentdetails>
+					</article>
+					<studentRegBlock class="content">
+						<ul>
+							<li>
+								SElect color:L <input type="color"> 
+							</li>
+							<li>
+								enter first no. <input type="number"> 
+							</li>
+							<li>
+								DOB <input type="date" format="">
+							</li>
+							<li>
+								DOB <input type="datetime-local" >
+							</li>
+							<li>
+								Searchtext <input type="email" >
+							</li>
+							<li>
+								RAting <input type="range" min="0" max="10">
+							</li>
+						</ul>
+					</studentRegBlock>
+					
+				</section>
+			</aside>
+		</main>
+		<footer >
+			@copy rights 2018
+		</footer>
+	</body>
+</html>

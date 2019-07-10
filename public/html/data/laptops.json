@@ -1,0 +1,45 @@
+{
+	"prodDetails": [
+		{
+			"name": "Lenovo Ideapad Core i3 6th Gen Laptop",
+			"ram": "4GB RAM",
+			"os": "DOS OPERATING SYS",
+			"hdd":"1TB HDD",
+			"price":"$1000",
+			"imageurl": "../images/lenovo.png"
+		},
+		{
+			"name": "Lenovo APU Dual Core A9 7th Gen  Laptop",
+			"ram": "4GB RAM",
+			"os": "DOS OPERATING SYS",
+			"hdd":"1TB HDD",
+			"price":"$1200",
+			"imageurl": "../images/lenovo.png"
+		},
+		{
+			"name": "Dell Inspiron Series Core i5 7th Gen",
+			"ram": "3GB RAM",
+			"os": "DOS OPERATING SYS",
+			"hdd":"1TB HDD",
+			"price":"$1800",
+			"imageurl": "../images/dell.png"
+		},
+		{
+			"name": "Apple MacBook Air Core i5 5th Gen ",
+			"ram": "8 GB DDR3 RAM",
+			"os": "64 bit Mac OS Operating System",
+			"hdd":"1TB HDD",
+			"price":"$5000",
+			"imageurl": "../images/apple.png"
+		},
+		{
+			"name": "HP 15 Core i5 8th Gen Laptop",
+			"price": "8 GB DDR4 RAM",
+			"manu": "DOS OPERATING SYS",
+			"hdd":"1TB HDD",
+			"price":"$3500",
+			"imageurl": "../images/hp.png"
+		},
+
+	]
+}

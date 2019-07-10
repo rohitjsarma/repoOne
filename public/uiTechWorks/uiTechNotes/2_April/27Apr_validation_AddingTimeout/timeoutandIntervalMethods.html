@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>
+			Demonstrating timeout and interval methods.
+		</title>
+		<style type="text/css">
+			.welcomeBlock {
+				text-align: center;
+				color: green;
+				font-size: 20px;
+				padding: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div >
+			<p>Demonstrating timeout and interval methods.</p>
+		</div>
+		<div class="welcomeBlock">
+		</div>
+		<input type="button" value="STOP" onclick="stop()">
+		<SCRIPT TYPE="text/javascript">
+			
+			var msginstance = setInterval(function(){
+				var divElmt = document.createElement("div");
+				divElmt.innerHTML = "<b>Hello, thanks for visiting our page....</b>";
+
+				document.querySelector(".welcomeBlock").appendChild(divElmt);
+			}, 3000);
+
+
+			function stop() {
+				clearInterval(msginstance);
+			}
+		</SCRIPT>
+	</body>	
+</html>

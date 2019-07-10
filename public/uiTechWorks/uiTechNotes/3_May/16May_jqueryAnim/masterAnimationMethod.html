@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>
+			Demonstrating master animation method.
+		</title>
+		<script type="text/javascript" src="../../../../jQuery/jquery.js"></script>
+		<style type="text/css">
+			.block {
+				width: 200px;
+				height: 220px;
+				border: 2px solid;
+				background: orange
+				;
+				text-align: center;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" value="Apply Styles" onclick="applyStyles()">
+		<div class="block">
+			CONTENT
+		</div>
+		<script type="text/javascript">
+			function applyStyles() {
+				$(".block").animate({
+					height: '300px',
+					width: '400px',
+					bottom: '30px'
+					
+
+				}, 2000);
+			}
+		</script>
+	</body>
+</html>;

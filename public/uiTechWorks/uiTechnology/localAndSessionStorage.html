@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>localAndsessionStorage</title>
+		<script type="text/javascript" src="../../../../jQuery/jquery.js"></script>
+		<style type="text/css">
+			.welcmBlock{
+				color: green;
+				text-align: center;
+				font-weight: bolder;
+				display: none;
+				padding: 8px;
+				margin: 8px
+			}
+			.thmeBlock{
+				float: right;
+				margin: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+		Enter the name:
+		<input type="text" name="" id="uName">
+		<input type="button" name="Enter" value="Enter"  onclick="readValues()">
+	    </div>
+
+		  <div class="welcmBlock">
+		  	Hello welcome to our page Mr/Mrs :<span id="duname"></span>
+		  </div>
+
+		<div class="thmeBlock">
+		<select id="themeval"  onchange= "applyTheme()">
+			<option>Red</option>
+			<option>lightBlue</option>
+			<option>lightGreen</option>
+			<option>Yellow</option>
+		</select>
+	    </div>
+	    <script type="text/javascript">
+	    	if (sessionStorage.getItem('user_name') != null) {
+				var storedUname = sessionStorage.getItem('user_name');
+				$("#duname").html(storedUname);
+				$(".welcmBlock").show(1000);
+			}
+			if(sessionStorage.getItem('user_color') !=null){
+				var storedColr=sessionStorage.getItem('user_color');
+				$("body").css("background", storedColr);
+			}
+	    	function readValues() {
+				var userName = $("#uName").val();
+				$("#duname").html(userName);
+				$(".welcmBlock").show(1000);
+				sessionStorage.setItem("user_name", userName)
+		
+				}
+	    	function applyTheme() {
+	    		var color=$('#themeval').val();
+	    		$("body").css("background", color);
+	    	    sessionStorage.setItem("user_color",color);
+	    		
+	    	}
+	    </script>
+
+	</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>formsValidationUsingAngularjs</title>
+	<script type="text/javascript" src="../../../../js/angular.min.js"></script>
+	<style type="text/css">
+		input[type=text]{
+			width: 20em;
+			border-radius: 5px;
+			margin: 5px;
+			padding: 5px;
+		}
+		
+		input[type=password]{
+			width: 20em;
+			margin: 5px;
+			padding: 5px;
+		}
+		.main{
+			border: 1px solid red;
+			margin: 10px;
+			padding: 15px;
+			width: 310px;
+			position: absolute;
+			left: 35%;
+			top:20%;
+       }
+       .errMsg{
+       	color: red;
+       	margin: 5px;
+       	font-weight: bolder;
+       }
+	</style>
+	<script type="text/javascript">
+		angular.module("myapp",[])
+		.controller("c1",function(){
+			
+		})
+	</script>
+</head>
+<body ng-app="myapp" ng-controller="c1">
+	
+	<div class="main">
+		<form novalidate="" name="userDetails">
+		<h2 style="color: blue;text-align: center;">Forms Validation </h2>
+		Enter your Name:</br>
+		<input type="text" name="uname" ng-model="details.uname" required=""><br>
+		<div class="errMsg"  ng-show="userDetails.uname.$invalid && userDetails.uname.$touched">User Name Is Mandatory</div>
+	<span style="color: red" ng-show="userDetails.uname.$error.$touched">User name Mandatory</span>
+		Enter your Password:</br>
+		<input type="password" name="upswd" ng-model="details.upswd"></br>
+	    Enter your Age:</br>
+		<input type="text" name="uage" ng-model="details.uage">
+		<br>
+		<br>
+		<input type="submit" name="" value="Register">
+
+
+
+	</form> 
+
+	</div>
+	 
+  <div>{{userDetails}} |json</div>
+
+
+
+</body>
+</html>

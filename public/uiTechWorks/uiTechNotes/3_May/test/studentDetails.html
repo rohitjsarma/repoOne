@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>studentDetailsWithTemplates</title>
+        <link rel="stylesheet" type="text/css" href="studentDetails.css">
+		<script type="text/javascript" src="studentDetails.js"></script>
+		<script type="text/javascript" src="../../../../jQuery/jquery.js"></script>
+		<script type="text/javascript" src="lib/jquery.loadTemplate-1.4.4.min.js"></script>
+		
+		
+
+	</head>
+	<body>
+		<input type="button" value="GET Student" onclick="loadDetails();">
+		
+		<div class="loadingBlock">
+			<img src="loading.gif" />
+		</div>
+		<div class="errBlock">
+			Error whiel interacting with the server...
+		</div>
+		<div id="stdnContainer">			
+		</div>
+
+		<script type="text/javascript" id="stdnTemplate">
+			<div class="block">
+				<ul>
+					<li>Student Name: <span data-content="name"></span></li>
+					<li>Student Age: <span data-content="age"></span></li>
+					<li>Student Gender: <span data-content="gender"></span></li>
+					<li>Student Location:<span data-content="location"></span></li>
+				</ul>
+			</div>
+		</script>
+
+
+	</body>
+</html>

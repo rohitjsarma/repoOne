@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>
+			Demonstrating student Details with conditional control structures.
+		</title>
+	</head>
+	<body>
+		<div>Demonstrating Student Details.</div>
+		<script type="text/javascript">
+			var sname, sage;
+			sname = "PRASAd";
+			sage = 50;
+			var m1 = 50, m2 = 90, m3 = 20;
+
+			var total = m1 + m2 + m3;
+
+			var avg = total / 3;
+			
+			console.log("STudent name is " + sname);
+			console.log("STudent Age is " + sage);
+			console.log("STudent Total is " + total);
+			console.log("STudent AVG is " + avg);
+			if (avg >= 40) {
+				console.log("Student is passed");	
+				if (avg >= 60) {
+					console.log("got first class");
+					if (avg >= 90) {
+						console.log("got Distinction.");
+					}
+				} else {
+					console.log("got Second class");
+				}
+			} else {
+				console.log("Student is Failed");	
+			}
+			console.log("Done job");
+
+			var a = 20;
+			var b = "20";
+			if (a == b) {
+				console.log("equal");
+			} else {
+				console.log("not equal");
+			}
+		</script>
+	</body>
+</html>

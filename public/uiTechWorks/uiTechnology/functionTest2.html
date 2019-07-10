@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>argumentAndReturn</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function logic(a) {
+				var total=avg=0;
+				for (var i = 0; i < a.length; i++) {
+                        total += a[i];
+				   		console.log(total);
+					
+				}
+				    console.log(total);
+					avg  = total/a.length;
+					var temp = [total,avg];
+					return temp;
+				
+
+				
+			}
+			function data() {
+				var a=[10,15,20,40,50];
+				
+				var temp = logic(a);
+				var values =logic(a);
+				total = values[0];
+				avg= values[1];
+			
+
+				console.log("total marks is " +total);
+				console.log("total average is " +avg);
+				console.log("both total and average is " +temp);
+
+
+			}
+			data();
+
+			
+		</script>
+
+	</body>
+</html>

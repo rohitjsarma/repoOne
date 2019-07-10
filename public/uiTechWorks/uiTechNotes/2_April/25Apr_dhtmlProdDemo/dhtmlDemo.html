@@ -1,0 +1,25 @@
+<html> 
+	<head>
+		<title>
+			Demonstrating dhtml methods and properties.
+		</title>
+		<style type="text/css">
+			.sample {
+				border: 1px solid;
+			}
+		</style>
+	</head>
+	<body>		
+		<div id="container"></div>
+		<script type="text/javascript">
+			var sum = 40 + 50;
+			var spanElement = document.createElement("span");
+			spanElement.innerText = "<b>The sum of two nos is " + sum + '</b>';
+			spanElement.style.background = "GREEN";
+			spanElement.setAttribute("class", "sample");
+			spanElement.setAttribute("id", "testg");
+			//console.log(spanElement);
+			document.querySelector("#container").appendChild(spanElement);
+		</script>
+	</body>
+</html>

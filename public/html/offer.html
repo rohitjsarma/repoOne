@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>miscellaneousProducts</title>
+		<script type="text/javascript" src="../js/angular.min.js"></script>
+		<style type="text/css">
+			img{
+				width: 200px;
+				height: 250px;
+				border: 1px solid red;
+				margin: 5px;
+				padding: 10px;
+			}
+			button{
+				width: 34em;
+				margin: 5px;
+				padding: 10px;
+				color: black;
+				background-color: orange;
+				height: 5em
+			}
+			body{
+				background-color: lightgreen;
+			}
+		</style>
+	</head>
+	<body ng-app="" ng-init="x='shoes'"    >
+		Select from Menu : <select ng-model="x">
+			<option>Shoes</option>
+			<option>Furniture</option>
+			<option>Electronics</option>
+			<option>MenDress</option>
+			<option>Miscellaneous</option>
+		</select>
+		<div ng-switch="x">
+			<div ng-switch-when="Shoes">
+			<h3>Shoes</h3>
+			<a href="#"><span><img src="../images/shoe1.jpg" width="150" ></span>
+			<img src="../images/shoe2.jpg" width="150">
+			<img src="../images/shoe3.jpg" width="150">
+			<img src="../images/shoe4.jpg" width="150">
+		    </a>
+			<br><button>BUY NOW</button>
+			<button>ADD TO CART</button>
+		    </div>
+		    <div ng-switch-when="Electronics">
+			<h3>Electronics</h3>
+			<img src="../images/boofer.jpg" width="150">
+			<img src="../images/ac.jpg" width="150">
+			<img src="../images/calc.jpg" width="150">
+			<img src="../images/mixer.jpg" width="150">
+			<img src="../images/chgr.png" width="150">
+			<br><button>BUY NOW</button>
+			<button>ADD TO CART</button>
+		    </div>
+		    <div ng-switch-when="MenDress">
+			<h3>MenDress</h3>
+			<img src="../images/men1.jpg" width="150">
+			<img src="../images/men2.jpg" width="150">
+			<img src="../images/men3.jpg" width="150">
+			<img src="../images/men4.jpg" width="150">
+			<img src="../images/men8.png" width="150">
+			<br><button>BUY NOW</button>
+			<button>ADD TO CART</button>
+		    </div>
+		    <div ng-switch-when="Furniture">
+			<h3>Furniture</h3>
+			<img src="../images/furn.jpg" width="150">
+			<img src="../images/furn1.jpg" width="150">
+			<img src="../images/furn2.jpg" width="150">
+			<img src="../images/furn3.jpg" width="150">
+			<img src="../images/furn4.jpg" width="150">
+			<br><button>BUY NOW</button>
+			<button>ADD TO CART</button>
+		    </div>
+		    <div ng-switch-default>
+			<h3>Miscellaneous</h3>
+			<img src="../images/clock.jpg" width="150">
+			<img src="../images/mouse.jpg" width="150">
+			<img src="../images/pan.jpg" width="150">
+			<img src="../images/tifin.jpg" width="150">
+			<img src="../images/fan.jpg" width="150">
+	
+			<br><button>BUY NOW</button>
+			<button>ADD TO CART</button>
+		    </div>
+			
+		</div>
+
+	</body>
+</html>

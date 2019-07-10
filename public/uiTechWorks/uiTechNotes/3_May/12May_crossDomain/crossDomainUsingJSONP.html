@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Limitations of AJAX
+		</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div>
+			<input type="button" value="Get Data" onclick="getData()">
+		</div>
+		<script type="text/javascript">	
+			function getData() {
+				$.ajax({
+					url: 'http://localhost:8081/getStudentDetails',
+					dataType: 'JSON',
+					method: 'GET',
+					success: function(res) {
+						console.log("success");
+						console.log(res);
+					},
+					error: function(err) {
+						console.log("error");
+						console.log(err);
+					}
+				})
+			}
+		</script>
+	</body>
+</html>

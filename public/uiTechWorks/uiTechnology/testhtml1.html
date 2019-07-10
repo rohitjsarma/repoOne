@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>testDynamicEventHandling</title>
+	<style type="text/css">
+		.span1{
+		height: 100px;
+		width: 100px;
+		border: 2px solid blue;
+	}
+</style>
+	</head>
+	<body>
+		<div id="container"></div>
+
+	<script type="text/javascript">
+		var a = prompt("enter the fval");
+		a= parseInt(a);
+		var b = prompt("enter the sval");
+        b = parseInt(b);
+		var sum = a+b;
+		var  spanElement =document.createElement("span") ;
+		spanElement.innerText="the sum of two num is " +sum;
+		spanElement.style.color="red";
+		spanElement.setAttribute("class","span1");
+		spanElement.setAttribute("id","spid");
+		document.querySelector("#container").appendChild(spanElement);
+	</script>
+
+
+	</body>
+</html>

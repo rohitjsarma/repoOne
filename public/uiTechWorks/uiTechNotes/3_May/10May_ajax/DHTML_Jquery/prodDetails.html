@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Dynamic Product deails using DHTML Methods and static event handling.
+		</title>
+		<link rel="stylesheet" type="text/css" href="app.css"></link>
+		<script type="text/javascript" src="../../../../jQuery/jquery.js"></script>
+		<style type="text/css">
+			.loadingBlock {
+				display: none;
+			}
+			.loadingBlock img {
+				width: 150px;
+				height: 120px;
+				position: absolute;
+				top: 30%;
+				left: 40%;
+				
+			}
+			.errBlock {
+				color: red;
+				margin: 100px;
+				text-align: center;
+				font-size: 25px;
+				display: none;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div class="title">
+			Product Details
+		</div>
+		<div class="loadingBlock">
+			<img src="images/loading.gif" />
+		</div>
+		<div class="errBlock">
+			Error whiel interacting with the server...
+		</div>
+		<input type="button" value="GET PRODUCTS" onclick="loadDetails();">
+		<input type="text" id="prodname">
+		<div id="prodContainer">			
+		</div>
+		<script type="text/javascript" src="productDetails.js">
+		</script>
+	</body>
+</html>

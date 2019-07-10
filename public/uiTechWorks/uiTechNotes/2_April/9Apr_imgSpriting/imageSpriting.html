@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Image spriting 
+		</title>
+		<style type="text/css">
+			.title {
+				text-decoration: underline;
+				text-align: center;
+				margin: 10px;
+				padding: 10px;
+				border: 1px solid;
+			}
+			li {
+				list-style: none;
+				border: 1px solid;
+				margin: 5px;
+				padding: 5px;
+				height: 120px;
+				clear: both;
+			}
+			.profilePic, .profileDetails {
+				float: left;
+				margin: 5px;
+				padding: 5px;
+
+			}
+			.profilePic {
+				background: url("images/spriteimg.png");
+				width: 46px;
+				height: 50px;
+			}
+			.emp2 {
+				background-position: 68px 65px;
+			}
+			.emp3 {
+				background-position: 142px 68px;	
+			}
+		</style>
+	</head>
+	<body>
+		TEST
+		<img src="images/emp1.png" />
+		<div class="title">
+			Employee Details
+		</div>
+		<ul>
+			<li>
+				<div class="profilePic">
+					
+				
+				</div>
+				<div class="profileDetails">
+					<div>Employee Name: RAJ</div>
+					<div>Employee Age: 20</div>
+					<div>Employee Gender: Male</div>
+				</div>
+			</li>
+			<li>
+				<div class="profilePic emp2">
+					
+				</div>
+				<div class="profileDetails">
+					<div>Employee Name: RAJ</div>
+					<div>Employee Age: 20</div>
+					<div>Employee Gender: Male</div>
+				</div>
+			</li>
+			<li>
+				<div class="profilePic emp3">
+					
+				</div>
+				<div class="profileDetails">
+					<div>Employee Name: RAJ</div>
+					<div>Employee Age: 20</div>
+					<div>Employee Gender: Male</div>
+				</div>
+			</li>
+			<li>
+				<div class="profilePic">
+					
+				</div>
+				<div class="profileDetails">
+					<div>Employee Name: RAJ</div>
+					<div>Employee Age: 20</div>
+					<div>Employee Gender: Male</div>
+				</div>
+			</li>
+		</ul>
+	</body>
+</html>

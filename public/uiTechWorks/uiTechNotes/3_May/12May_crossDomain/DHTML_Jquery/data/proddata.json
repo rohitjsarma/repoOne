@@ -1,0 +1,34 @@
+{	
+	"prodDetails": [
+		{
+			"name": "laptop",
+			"price": "200$",
+			"manu": "Samsung",
+			"imageurl": "images/laptop.png"
+		},
+		{
+			"name": "laptop",
+			"price": "300$",
+			"manu": "HTC",
+			"imageurl": "images/laptop.png"
+		},
+		{
+			"name": "laptop",
+			"price": "300$",
+			"manu": "Samsung",
+			"imageurl": "images/laptop.png"
+		},
+		{
+			"name": "laptop",
+			"price": "300$",
+			"manu": "Dell",
+			"imageurl": "images/laptop.png"
+		},
+		{
+			"name": "mobile",
+			"price": "500$",
+			"manu": "Dell",
+			"imageurl": "images/laptop.png"
+		}
+	]
+}

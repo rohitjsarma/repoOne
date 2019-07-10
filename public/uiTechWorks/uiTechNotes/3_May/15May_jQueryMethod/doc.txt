@@ -1,0 +1,130 @@
+$("#abc") - REturns the reference of an element having id as abc
+
+$(".pqr") - REturns the reference of an element having class name as pqr
+
+$("div") - Returns the list of all th elements having tag name as div
+
+$("input")  - Returns the list of all input elements on the page
+
+$("input[@name="test"]) - Returns the list of all the input elemetns hving the name attribute value as test
+
+$(":radio") - Return all the radio buttons on page
+
+$(":checked") - Returns the list of all check boxes with checked state
+
+$("li:first") - Returns the list of all li elements in first chidl state
+
+$("li:last") - Returns the list of all the li elements wich are in last child state
+
+$("td:odd") - List of all the td elements in odd position
+
+$("td:even") - List of all the td elements in even position
+
+$("li:eq(2)") - All the lielemetns which are in 2nd position
+
+$("li:gt(5)")  All the li elements which are greater than 5th position
+
+$("li:lt(5)")  All the li elements which are lesser than 5th position
+
+$(":parent") - Returns all the elements which all are in parent position
+
+$("div:parent") - All the div elements which are in parent position
+
+$("span:contains(hello)") - Returns the spa element having the content as hello
+
+$("div#abc.pqr") - Returns the reference of div element having id as abc and class as pqr
+
+$("div #abc .pqr") - Returns the element having class as pqr which is child of element having id as abc and in turn child of div element.
+
+
+etc.
+
+
+.html() - Used to set or get the html for any dom elemtn on page
+
+.append() - To append an element to an existing element.
+
+.addClass("classname") - Used to add single or multiple classes to an element.
+
+.attr("attrname", "value") - Used to set or get the attribute from a dom element
+
+.removeClass("classname") - Used to remove a class from a DOM Element
+
+.show() - To make the dom element to be visible on page.
+
+.hide() - To make the dom element to be not visible on page.
+
+.hasClass("classname") - Returns true/false if the element holds the provided classname
+
+.text("text content") - Used to set or get the text content for any dom element
+
+.css("property", "value") - Used to set a single css property to an element
+\
+
+.css({property1: 'value2', property2: 'value2'}) - Used to set multiple css properties to an element
+
+.val("optional value") - Used to set or get value of an input element.
+
+.toggle() - USed to toggle the view of an element
+
+.toggleClass("Classname") - Toggles the provided class to an element
+
+.removeAttr("attrname") - Used to remove the attribute from an element
+
+etc...
+
+Handling Events in Jquery:
+
+Two ways of adding events to an element in jquery.
+1. Directly adding event type as method
+2. Dynamically passing event type to "on" method.
+
+1. Directly adding events to an element by calling event method:
+	.click(<callbackmethod>);
+	.dbclick(<callbackmethod>);
+	.mouseover(<callbackmethod>);
+	.focus(<callbackmethod>);
+	.change(<callbackmethod>);
+	.blur(<callbackmethod>);
+	.keyup(<callbackmethod>);
+	.keydown(<callbackmethod>);
+	.keypress(<callbackmethod>);
+	etc.
+
+2. Adding dynamic events using 'on' method
+	Syntax:
+		element.on("type of event", callbackmethod);
+	eg:
+		element.on("click", function(event){
+			...
+		});
+		element.on("mouseover", function(event){
+			...
+		});
+		element.on("keypress", function(event){
+			...
+		});
+		...
+
+element.parent() - REturns the reference of the immidiate parent
+
+element.parents() - Returns the references of all the parents of an element, until html tag
+
+element.parentsUntil('#abc') - REturns the reference of all the parents until it finds an ancestor  having id as abc
+
+
+Traversing Decendents:
+
+	element.children() - Returns the immediate child elements of an elemnt
+	element.find('pattern') - Finds and returns the childrens of an element with specific pattern.
+
+	element.find('*') - Finds all children with in an element
+
+Traversing Siblings:
+
+	element.prev() - Returns the very immidiate prev elemnt of an element
+	element.next() - Returns the very next sibling
+	element.nextAll() - Returns all the next siblings()
+	element.prevAll() - REturns all the previous sibling elements
+	element.prevUntil("pattern") - Returns the list of all previous elements until the given pattern matches
+	element.nextUntil() -

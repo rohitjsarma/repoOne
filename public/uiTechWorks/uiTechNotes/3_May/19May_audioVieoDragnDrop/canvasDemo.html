@@ -1,0 +1,49 @@
+<html manifest=".../sample.appcache">
+	<head>
+		<title>
+			Demonstrating HTML5 Canvas tag.
+		</title>
+		<style type="text/css">
+			canvas {
+				width: 600px;
+				height: 500px;
+				border: 2px solid;
+				margin: 10px auto;
+			}
+		</style>
+	</head>
+	<body>	
+		<canvas id="myContainer">
+		</canvas>
+		<script type="text/javascript">
+			var ctx = document.querySelector("#myContainer").getContext("2d");
+			var colors = ['red', 'green', 'black', 'blue', 'yellow'];
+			/*var x = 10;
+			var y = 10;
+			var i = 0;
+			setInterval(function(){
+				ctx.fillStyle = colors[i];
+				x += 5;
+				y += 5;
+				ctx.fillRect(x, y, 50, 20);
+				i++;
+				if (i+1 > colors.length) {
+					i = 0;
+				}
+			}, 1000); 
+			ctx.moveTo(10, 10);
+			ctx.lineTo(100, 100);
+			ctx.stroke(); 
+
+
+			ctx.arc(95, 50, 40, 0, 2*Math.PI);
+			ctx.stroke(); */
+
+			ctx.font = "20px arial";
+			ctx.fillText("Hello all", 10, 50);
+
+			ctx.strokeText("Hello all", 10, 100);
+
+		</script>
+	</body>
+</html>

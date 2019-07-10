@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>
+			Demonstrating sending data to server.
+		</title>
+		<script type="text/javascript" src="../jquery.js"></script>
+	</head>
+	<body>
+		<input type="text" id="productId">
+		<input type="button" value="GetData" onclick="getData()">
+		<script type="text/javascript">
+			function getData() {
+				var prodId = $("#productId").val();
+				$.ajax({
+					url: "http://localhost:8080/products/getproductsinfo",
+					method: 'GET',
+					dataType: 'JSON',
+					data: {
+						productId: prodId,
+						test1: 'sample',
+						abc: 'pqr'
+
+					},
+					success: function(response) {
+						console.log("Success");
+						console.log(response);
+					},
+					error: function(e) {
+						console.log("Error");
+						console.log(e);
+					}
+				})
+			}
+		</script>
+	</body>
+</html>

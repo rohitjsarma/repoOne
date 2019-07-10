@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>drag and drop event</title>
+		<style type="text/css">
+			img{
+				width: 100px;
+				height: 100px;
+				border: 1px solid red;
+				padding: 5px;
+				margin: 10px;
+			}
+			#container{
+				width: 300px;
+				height: 400px;
+				border: 1px solid;
+				background:#ccc;
+				margin: 10px;
+				padding: 10px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="container" ondrop="onDrop(event)" ondragover="onDragOver(event)">
+			
+		</div>
+	<img src="../../images/btrfly.jpg" draggable="true" ondragstart="onDragStart(event)" 
+	id="prodImg"/>
+	<script type="text/javascript">
+
+		function onDragStart(event) {
+			console.log(event);
+			console.log('drag started');
+         imageid = event.target.getAttribute("id");
+			
+		}
+
+		function onDrop(event) {
+			event.preventDefault();
+			console.log(event);
+			var imgSrc = document.querySelector("#" + imageid).getAttribute('src');
+
+				var imgTag = document.createElement("img");
+				imgTag.setAttribute("src",imgSrc );
+				event.target.appendChild(imgTag);
+		}
+		function onDragOver(event) {
+			event.preventDefault();
+			console.log(event);
+
+			
+		}
+	</script>
+
+	</body>
+</html>

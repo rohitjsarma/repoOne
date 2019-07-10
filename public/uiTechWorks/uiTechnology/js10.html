@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test</title>
+	</head>
+	<body style="color: ">
+		<script type="text/javascript">
+			//WAP TO FIND PRIME NO BETWEEN 1 TO 100.
+			var i;
+			for(i=1;i<=100;i++){
+				var j;
+				var count=0;
+				for(j=1;j<=i;j++){
+					if (i%j===0){
+						count ++;
+					}
+					if (count>2){
+						break;
+					}
+				}
+			if(count==2){
+				console.log(i+ " is prime no");
+			}else{
+				console.log(i+ " is not prime no");
+			}
+		}
+		
+		//WAP TO FIND THE TABLE .
+		/*var i=prompt("enter the value");
+		var n;
+		for(n=1;n<=10;n++){
+			console.log(i);
+			var result = i*n;
+          console.log(result);
+		}
+		*/
+		//WAP TO FIND THE SUM OF ALL INDIVIDUAL DIGIT OF A GIVEN NO.
+		/*var i = prompt("enter the value");
+		var sum = 0;
+		 while(i>0){
+		 	console.log(i);
+             var rem = i%10;
+             sum += rem;
+             i = i/10;
+             i=parseInt(i);
+             console.log(i);
+             console.log("the sum is " +sum );
+		 }
+		 */
+        //WAP TO FIND THE REVERSE OF ANY NO.
+      /*  var i=548;
+        while(i > 0){
+        	var reminder = i%10;
+        	var reverseno=0;
+         reverseno= reverseno*10+reminder;
+        	i =i/10;
+        	i=parseInt(i);
+        	console.log(i);
+        	console.log("REVERSE Is " +reverseno)
+        }*/
+        //WAP TO FIND WHETHER THE NO IS PALINDROME NUMBER OR NOT.
+     /*  var i =prompt("enter the number"); //5225
+        while(i>0){
+        	var temp;
+        	var sum =0;
+        	var rem=i%10;
+        	sum = sum*10+rem;
+        	var i = i/10;
+        	i=temp;
+        	
+        }
+        	if(i==sum){
+        		console.log("the number is palindrome number");
+        	}
+        	else{
+        		console.log("the number is not palindrome number");
+        	}*/
+
+       //WAP TO FIND THE GIVEN NUMBER OS ARMSTRONG NUMBER OR NOT.
+
+      /* var i =prompt("enter any value");
+       var sum = 0;
+       var r;
+       var temp;
+        while(i>0){
+        	r=i%10;
+        var c=r*r*r;
+        	sum = sum+c;
+        	i=i/10;
+        	i=temp;
+        }
+        if(i==sum){
+        	console.log("the number is ARMSTRONG number");
+        }else{
+        	console.log("the number is not ARMSTRONG number");
+        }*/
+
+     
+
+			
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title>
+			Student Registration page to demonstrate input elements.
+		</title>
+		<style type="text/css">
+			li {
+				list-style: none;
+				background: #ccc;
+				margin: 5px;
+				padding: 5px;
+			}
+			ul {
+				border: 1px solid;
+				margin: 10px auto;
+				width: 350px;
+				padding: 10px;
+			}
+			.title {
+				font-size: 20px;
+				color: green;
+				text-align: center;
+				text-decoration: underline;
+				margin: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="title">
+			Student Registration Form
+		</div>
+		<form method="POST" action="https ://www.abctesting.com/sendata">
+			<ul>
+				<li>
+					<label for="test">Enter user name</label>
+					<input type="text" name="uname">
+				</li>
+				<li>
+					<label >Enter acnt pwd</label>
+					<input type="password" name="actPwd" maxlength="10">
+				</li>
+				<li>
+					<label >Gender</label>
+					<input type="radio" name="usergender"> M
+					<input type="radio" name="usergender"> F
+				</li>
+				<li>
+					<label>Languages you knw</label>
+					<input type="checkbox" name="eng"> English
+					<input type="checkbox" name="tel"> Telugu
+					<input type="checkbox" name="hin"> Hindi
+				</li>
+				<li>
+					<label>Country</label>
+					<select name="ucountry">
+						<option>India</option>
+						<option>Japan</option>
+						<option>China</option>
+						<option>India</option>
+					</select>
+				</li>
+				<li>
+					<label>Tell about urself</label>
+					<textarea min="" max="" name="uAbt"></textarea>
+				</li>
+				<li>
+					<input type="submit" value="Send Data">
+				</li>
+			</ul>
+		</form>
+	</body>
+</html>

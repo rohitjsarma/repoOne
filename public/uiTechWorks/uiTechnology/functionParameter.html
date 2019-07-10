@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>functionWithParameter</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function addValues(firstVal,secondVal) {
+				var result = 0;
+				result = firstVal+secondVal;
+				console.log("the sum is " +result);
+				//document.write("the sum is " +result);
+			}
+			
+			function readValues() {
+				var firstVal = prompt("enter the first Value");
+				var secondVal = prompt("enter the second Value"); 
+				firstVal = parseInt(firstVal);
+				secondVal = parseInt(secondVal);
+				addValues(firstVal,secondVal);
+			}
+			
+			readValues();
+			//addValues();
+			
+		</script>
+
+	</body>
+</html>

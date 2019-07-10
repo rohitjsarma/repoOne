@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>
+			Demonstrating CSS Priorities
+		</title>
+		<style type="text/css">
+			.content {
+				background: green;
+				font-size:35px;
+			}
+			#sampleContainer {
+				font-weight: bolder;
+				font-size:30px !important;
+			}
+			p {
+				font-size:25px;
+			}
+		</style>
+	</head>
+	<body>
+		<p style="color:blue;font-size:20px;" class="content" id="sampleContainer">
+			Sample content
+		</p>
+	</body>
+</html>

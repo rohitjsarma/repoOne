@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Javascript object with properties and behaviour
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var sDetails = {
+				"name": 'Raj',
+				 age: 20,
+				 gender: 'Male',
+				'marks': [50, 33, 56,90],
+				showDetails: function() {
+					sDetails.getTotalAndAvg();
+					console.log("Student Details");
+					console.log("Student Name - " + this.name);
+					console.log("Student Age - " + sDetails.age);
+					console.log("Student Gender - " + sDetails.gender);
+					console.log("Student Total - " + sDetails.total);
+					console.log("Student Avg - " + this.avg);
+					this.displayGrade();
+				},
+				getTotalAndAvg: function() {
+					sDetails.total = 0 ;
+					for (var i = 0 ; i < this.marks.length; i++) {
+						this.total += sDetails.marks[i];
+					}
+					sDetails.avg = sDetails.total/sDetails.marks.length;
+				}
+			  };
+			sDetails.total = 0;
+			sDetails.displayGrade =  function() {
+					if (this.avg > 40) {
+						console.log("Congrats you passed");
+					} else {
+						console.log("You have a surprise");
+					}
+			};
+			sDetails.showDetails();
+
+		</script>
+	</body>
+</html>

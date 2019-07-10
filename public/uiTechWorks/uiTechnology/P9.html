@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>imageSpriting</title>
+		<style type="text/css">
+		.title{
+			text-decoration: underline;
+			text-align: center;
+			margin: 10px;
+			padding: 10px;
+			border: 2px solid orange;
+			color: green;
+          }
+
+		li{
+			list-style: none;
+			margin: 5px;
+			padding: 5px;
+			height: 80px;
+			clear: both;
+			border: 2px solid violet;
+
+		}
+		.profilePic,.profileDetails{
+			
+			float: left;
+			margin: 5px;
+			padding: 5px;
+
+		}
+		.profilePic{
+			background: url("images/spritingImage.png");    
+			width: 75px;
+			height: 64px;
+
+		}
+		.emp2{
+
+			background-position: -196px 4px;
+		}
+		.emp3 {
+				background-position: 256px -3px;	
+			}
+		.emp4{
+			background-position: -2px -128px;
+		}
+		.emp5{
+			background-position: 228px -117px;
+		}
+		
+
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<div class="title">
+			<b>Employee Deatils</b><br>
+			This is the example of Image Spriting.
+
+		</div>
+		<ul>
+			<li>
+				<div class="profilePic"></div>
+				<div class="profileDetails">
+					<div>Employee Name: RAJ</div>
+					<div>Employee Age: 20</div>
+					<div>Employee Gender: Male</div>
+				</div>
+			</li>
+			<li>
+		
+				<div class="profilePic emp2"></div>
+				<div class="profileDetails">
+					<div>Employee Name: RIYA</div>
+					<div>Employee Age: 25</div>
+					<div>Employee Gender: Female</div>
+				</div>
+			
+			</li>
+			<li>
+				<div class="profilePic emp3"></div>
+				<div class="profileDetails">
+					<div>Employee Name: Prakash</div>
+					<div>Employee Age: 29</div>
+					<div>Employee Gender: Male</div>
+				</div>
+			</li>
+			<li>
+				<div class="profilePic emp4"></div>
+				<div class="profileDetails">
+					<div>Employee Name: Abhishek</div>
+					<div>Employee Age: 42</div>
+					<div>Employee Gender:Male</div>
+				</div>
+			</li>
+			<li>
+				<div class="profilePic emp5"></div>
+				<div class="profileDetails">
+					<div>Employee Name: Aishwarya</div>
+					<div>Employee Age: 35</div>
+					<div>Employee Gender: Female</div>
+				</div>
+			</li>
+		</ul>
+	</body>
+</html>

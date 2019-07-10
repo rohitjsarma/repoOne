@@ -1,0 +1,78 @@
+header{
+	border: 1px solid green;
+	text-align: center;
+	padding: 5px;
+	margin: 5px;
+	width: 98%;
+	color: orange;
+	font-size: 25px;
+
+}
+footer{
+	border:1px solid green;
+	text-align: center;
+	padding: 5px;
+	margin: 5px;
+	position: absolute;
+	bottom: 0;
+	font-size: 20px;
+	width: 97%
+
+}
+.container{
+	height: 550px;
+	border: 1px solid green;
+	padding: 5px;
+	margin: 5px;
+	width: 98%;
+	color: orange;
+	font-size: 25px;
+
+}
+.addsBlock {
+	width: 200px;
+	height: 150px;
+	border: 2px solid;
+	border-radius: 10px;
+	position: absolute;
+	top: 200px;
+	right: 30px;
+	padding-top: 50px;
+	background: yellow;
+}
+button{
+	border-radius:1px ;
+	border: 1px solid lightblue;
+	width: 7%;
+	margin: 5px;
+	padding: 5px;
+	color: red;
+
+}
+.prodBlock{
+	position: absolute;
+	bottom: 75%;
+	left: 25%;
+	font-size: 40px;
+
+}
+.img{
+	position:absolute;
+	clear:both;
+	left: 35%;
+	top: 35%
+
+}
+
+@media (max-width: 750px) {
+	.prodBlock {
+		background: yellow;
+		color: red;
+
+	}
+}
+@media (max-width: 500px){
+	body{
+		
+	}
+}

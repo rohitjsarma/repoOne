@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>exceptionHandling</title>
+		<style type="text/css">
+		.block{
+		  height: 10px;
+		  border: 2px solid blue;
+		  color: green;
+		  background-color: yellow;
+		  text-align: center;
+		  padding: 10px;
+		  margin:10px;
+
+		}
+		.welcomeblock{
+			border: 2px solid green;
+			height: 20px;
+			color:red;
+			margin: 80px;
+			background-color: #ccc;
+			text-align: center;
+
+		}
+
+			
+		</style>
+		
+	</head>
+	<body>
+      <div>Click on Create block and click on show message </div>
+      <div>
+      	<br/>
+      	<input type="button" name="btn1" id="" value="createBlock" onclick="createBlock()">
+      	<input type="button" name="btn2" id="" value="showMessage" onclick="showMessage()">
+      </div>
+      <div id="crtBlock"></div>
+      <div id="shwMsg"></div>
+      <script type="text/javascript">
+      	function createBlock() {
+      		var divElement = document.createElement('div');
+      		divElement.setAttribute('class', 'block');
+      		document.querySelector("#crtBlock").appendChild(divElement);
+      	}
+      	function showMessage() {
+      		try{
+      	document.querySelector(".block").innerHTML="<b>Hello there Welcome to the Block</b>"
+      }catch(err){
+        console.log("make sure you click on create block before show message");
+       }
+        setTimeout(function(){
+					document.querySelector("#shwMsg").innerHTML = "Thanks for visiting our page.";
+					document.querySelector("#shwMsg").setAttribute("class", "welcomeblock");
+				}, 3000)
+      		
+      	}
+      </script>
+	</body>
+</html>

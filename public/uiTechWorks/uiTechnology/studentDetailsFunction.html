@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>studentDetails</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var sname = "razz";
+			var age = 25;
+			var gender = "male";
+			var marks=[25,35,65,55,61];
+			var total = avg = 0;
+			var n = marks.length;
+			function getTotalAvg() {
+				for (var i = 0; i < n; i++) {
+					total +=marks[i];
+				}
+				avg = total/n;
+
+				console.log("total marks obtained " +total);
+			    console.log("total average " +avg);
+			
+			}
+			function displayGrade() {
+				
+				if(avg>30){
+					console.log("just passesd");
+			      }
+				else {
+					console.log("second divison");
+				} if(avg>60){
+					console.log("first divison");
+				}else if(avg>75){
+					console.log("got distinction");
+				}else{
+					console.log("thank you ");
+				}
+				
+				
+			}
+			function displayData() {
+				console.log("Student name is " +sname);
+				console.log("Student age is " +age);
+				console.log("Student gender is " +gender);
+
+			}
+
+			displayGrade();
+			getTotalAvg();
+			displayData();
+
+		</script>
+
+	</body>
+</html>

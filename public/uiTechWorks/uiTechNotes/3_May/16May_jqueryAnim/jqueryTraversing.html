@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Jquery traversing Methods
+		</title>
+		<script type="text/javascript" src="../../../../jQuery/jquery.js"></script>
+		<style type="text/css">
+			.block {
+				border: 1px solid;
+				background: #ccc;
+				padding: 5px;
+				margin: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div>
+				<div>
+					<span id="childElement">Content</span>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>Item1</li>
+			<li>Item2</li>
+			<li id="item">Item3</li>
+			<li>
+				Item4
+				<div>
+					Sub Child
+					<span>
+						Inner Child
+					</span>
+				</div>
+			</li>
+			<li>Item5</li>
+		</ul>
+		<input type="button" value="Apply" onclick="applyStyles()">
+		<script type="text/javascript">
+			function applyStyles() {
+				// $('#childElement').addClass('block');
+				// var parentElement = $('#childElement').parents().addClass('block');
+				// var parentElement = $('#childElement').parentsUntil('body').addClass('block');
+				// $("ul").children().addClass('block');
+				// $("ul").find('div #abc').addClass('block');
+				// $('#item').prev().addClass('block');
+				$('#item').next().addClass('block');
+
+			}
+
+			/*$("#childElement").click(function(){
+				$(this).addClass('block');
+			}) */
+		</script>
+	</body>
+</html>;
+
+
+
+

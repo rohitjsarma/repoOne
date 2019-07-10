@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DealoceanSignup</title>
+		<link rel="stylesheet" type="text/css" href="../css/signin.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<script type="text/javascript" src="../js/signin.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-cookies.js"></script>
+	</head>
+	<body ng-app="myapp" ng-controller="c1">
+		<img src="../images/logo.png">
+		<div class="block1" >
+		 <form method="post" action="https://www.dealocean.php" target="_blank">
+			<h1>Login</h1>
+			<b>Email or Mobile phone number</b><br>
+			<input type="text" name="username" required="" ng-model="t1" ng-blur="fun2()"><br>
+			<br/>
+			<b>Enter your Password</b><br>
+			<input type="Password" name="Password" maxlength="10" required="" ng-model="t2"><br/>
+			<br>
+			<input type="checkbox" name="" ng-model="chk1">:Remember me <br>
+			<br>
+			<input type="Submit" name="button" value="Continue" ng-click="funlogin()">
+			<br/>
+			<br>
+			<a href="../html/forgotPassword.html" target="_blank">Forgot Password</a>
+			</form>
+			<hr>
+			<h5>New to Dealocean?</h5><br>
+			<a href="../html/registration.html" target="_blank"><button id="button" type="Submit">Create your Dealocean account</button></a>
+		 
+		</div>
+		<hr>
+		<div class="footer">
+		  <p>&copy 2017-2018, Dealocean.com, Inc. or its affiliates</p>
+		</div>
+		
+
+
+
+	</body>
+</html>

@@ -1,0 +1,11 @@
+<html>
+	<head>
+		<title>
+			News  Content
+		</title>
+	</head>
+	<body>
+		News title:
+			This is the conten tof the news been happend yesterdy in the city evening...
+	</body>
+</html>

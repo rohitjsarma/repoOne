@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Drag and Drop Example </title>
+		<style type="text/css">
+		   img{
+		   	float: left;
+		   	width: 150px;
+		   	height: 150px;
+		   	margin: 5px;
+		   	padding: 10px;
+		   	border: 2px dotted red
+		   }
+		   div{
+		   	width: 300px;
+		   	height: 400px;
+		   	border: 2px solid green;
+		   	float: left;
+		     }
+		    
+
+		</style>
+
+	</head>
+	<body>
+		<h1>Drag and drop Event</h1>
+		<div id="block1" ondrop="onDrop(event)" ondragover="onDragOver(event)">block1Men</div>
+		<div id="block2" ondrop="onDrop(event)" ondragover="onDragOver(event)" >block2Women</div>
+		<div id="block3" ondrop="onDrop(event)" ondragover="onDragOver(event)">block3Kids</div>
+		<br>
+		<br>
+		<img src="../../images/men2.jpg"draggable="true" ondragstart="onDragStart(event)" 
+	id="prodImg"/ >
+	<img src="../../images/wmens.jpg"draggable="true" ondragstart="onDragStart(event)" 
+	id="prodImgwmens"/ >
+	<img src="../../images/kid.jpg"draggable="true" ondragstart="onDragStart(event)" 
+	id="prodImgkids"/ >
+		<script type="text/javascript">
+			function onDragStart(event) {
+			 
+			 imageid = event.target.getAttribute("id");
+				
+			}
+			function onDrop(event) {
+				event.preventDefault();
+				var imgSrc = document.querySelector("#" + imageid).getAttribute('src');
+
+				var imgTag = document.createElement("img");
+				imgTag.setAttribute("src",imgSrc );
+				event.target.appendChild(imgTag);
+					
+			}
+			
+			function onDragOver(event) {
+				event.preventDefault();
+			    console.log(event); 
+			}
+			
+			
+		</script>
+
+	</body>
+</html>

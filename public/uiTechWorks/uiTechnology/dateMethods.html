@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>diffrentsdatesMethods</title>
+	</head>
+	<body>
+		<div>Date Objects</div>
+		<script type="text/javascript">
+			var sdate = new Date();
+			console.log(sdate);
+			console.log(Date());
+			
+			console.log(sdate.getDate());
+		var y =	console.log(sdate.getMonth());
+			console.log(sdate.getDay());
+			console.log(sdate.getFullYear());
+			console.log(sdate.getHours());
+			console.log(sdate.getMinutes());
+			console.log(sdate.getSeconds());
+			console.log(sdate.getMilliseconds());
+var fulldate = sdate.getDate() + ' / ' + sdate.getMonth() +  '/' + sdate.getFullYear();
+			console.log(fulldate);
+
+ var x = new Array('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec');
+
+			var tdate= new Date();	
+			var date  = tdate.getDate();
+			var month = tdate.getMonth();
+			var year  = tdate.getFullYear();
+		 console.log(date + ' / ' + x[month] +  '/' + year);
+      document.write(date + ' / ' + x[month] +  '/' + year);
+
+	</script>
+
+			
+
+	</body>
+</html>

@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<title>
+			Demonstrating multi contrl communiction using $rootScope
+		</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<script type="text/javascript" src="js/app.js"> </script>
+		<link rel="stylesheet" type="text/css" href="css/app.css">
+	</head>
+	<body>
+		<div ng-app="multiCntrlApp">
+			<div ng-controller="multiAppCntrl">
+				<div class="title">
+					SBI Banking operations
+				</div>
+			
+				<div class="block" ng-controller="withdrwCntrl">
+					<div class="tbalance">
+						Total Acount Balance: 
+						<span class="bal">
+							Rs. {{totalBalance}}
+						</span>
+					</div>
+					<div class="subtitle">
+						Amount with draw block
+					</div>
+					Enter about to be with drawn: <input type="number" ng-model="wthdrwAmnt">
+					<input type="button" value="With Draw Amount" ng-click="doWithDrawAmount()">
+					<div class="successMsg" ng-show="shwWithDrwSuccess">
+						{{withDrwSuccessMsg}}
+					</div>
+				</div>
+
+
+				<div class="block" ng-controller="depositCntrl">
+					<div class="tbalance">
+						Total Acount Balance: 
+						<span class="bal">
+							Rs. {{totalBalance}}
+						</span>
+					</div>
+					<div class="subtitle">
+						Amount with deposited
+					</div>
+					Enter Amount to deposit: <input type="number" ng-model="dpstAmnt">
+					<input type="button" value="Deposit Amount" ng-click="doDepositAmount()">
+					<div class="successMsg" ng-show="dpstSuccess">
+						{{dpstSuccessMsg}}
+					</div>
+				</div>
+
+
+				<div class="block" ng-controller="FdCntrl">
+					<div class="tbalance">
+						Total Acount Balance: 
+						<span class="bal">
+							Rs. {{totalBalance}}
+						</span>
+					</div>
+					<div class="subtitle">
+						Fixed Deposit Block
+					</div>
+					Enter Amount to FD: <input type="number" ng-model="fdAmnt">
+					<input type="button" value="FD amount" ng-click="doFDAmount()">
+					<div class="successMsg" ng-show="fdSuccess">
+						{{fdSuccessMsg}}
+					</div>
+				</div>
+				<div class="block">
+				<div class="tbalance">
+					Total Acount Balance: 
+					<span class="bal">
+						Rs. {{totalBalance}}
+					</span>
+				</div>
+				<div class="subtitle">
+					Insurence block
+				</div>
+				<div>
+					{{insMsg}}
+				</div>
+			</div>
+			Trnsaction: {{transactionTrack}}
+			</div>
+
+
+		</div>
+	</body>
+</html>

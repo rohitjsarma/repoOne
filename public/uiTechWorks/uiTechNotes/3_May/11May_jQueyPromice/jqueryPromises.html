@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Jquery Promises....
+		</title>
+		<script type="text/javascript" src="../../../../jQuery/jquery.js"></script>
+		<script type="text/javascript" src="matchDetails.js"></script>
+
+		<style type="text/css">
+			.block {
+				height: 200px;
+				border: 2px solid;
+				padding: 10px;
+				margin: 10px;
+			}
+			.maintitle {
+				text-align: center;
+				font-size: 30px;
+				color: green;
+				margin: 5px;
+			}
+			li {
+				list-style: none;
+				border: 1px solid;
+				background: #ccc;
+				margin: 5px;
+				padding: 5px;
+			}
+			img {
+				width: 100px;
+				height: 60px;
+			}
+			.loadingBlock {
+				position: absolute;
+				top: 30%;
+				left: 45%;
+			}
+			.maskBlock {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				background: #ccc;
+				opacity: 0.8;
+			}
+			.loadAndMsgContainer {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="loadAndMsgContainer">
+			<div class="maskBlock"></div>
+			<div class="loadingBlock">
+				<img src="images/loading.gif" />
+			</div>
+		</div>
+		<div class="maintitle">
+			CRICKET Score Details...
+		</div>
+		<input type="button" value="Get Score Detaiils" onclick="getScoreDetails();">
+		
+		<div class="block1 block">
+			<div class="title">Match 1 Details:</div>
+			<div id="match1Container">
+				
+			</div>
+		</div>
+		<div class="block2 block" >Match 2 Details:
+			<div id="match2Container"></div>
+		</div>
+	</body>	
+</html>

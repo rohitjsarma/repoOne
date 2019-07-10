@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>
+			Student details using functions
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var sname = "PRASAD"
+			var sage = 20;
+			var gender = "Male";
+			var location1 = "Hyderabad";
+			var marks = [40, 23, 90, 99, 75];
+			var total = avg = 0;
+
+			function getTotalAvg() {
+				for (var i= 0 ; i < marks.length; i++) {
+					total += marks[i];
+				}
+				avg = total/marks.length;
+			}
+
+			function displayGrade() {
+				getTotalAvg();
+				if (avg < 40) {
+					console.log("You have a Surprise");
+				} else {
+					console.log("You Passed");
+					if (avg > 90) {
+						console.log("Got First class");
+					} else {
+						console.log("Got Second class");
+					}
+				}
+			}
+
+			function displayData() {				
+				displayData();
+				console.log("Student name is " + sname);
+				console.log("Student AGe is " + sage);
+				console.log("Student Gender is " + gender);
+				console.log("Student Total is " + total);
+				console.log("Student AVG is " + avg);
+			}			
+			displayGrade();
+		</script>
+	</body>
+</html>

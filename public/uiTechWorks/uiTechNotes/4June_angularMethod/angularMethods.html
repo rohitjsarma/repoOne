@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>
+			Demonstrating "angular" object
+		</title>
+		<script type="text/javascript" src="../../../../js/angular.min.js"></script>
+		
+		<style type="text/css">
+			.block {
+				width: 200px;
+				height: 200px;
+				border: 2px solid;
+				background: green;
+				text-align: center;
+			}
+			.sample {
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+		<select onchange="setBlock()" id="blockSelect">
+			<option>block1</option>
+			<option>block2</option>
+		</select>
+		<div  ng-controller="angularCntrl" id="block1">
+			<input type="button" value="Apply Styles" ng-click="applyStyles()">
+			<div id="container" > 
+				USER Content
+			</div>
+			<div id="container2" class="sample"> 
+				USER Content
+			</div>
+
+			Enter user Age: <input type="number" ng-model="userDetails.age"> <input type="button" value="Copy Details to Temp" ng-click="copyDetails()">
+
+			<div>
+				Main Obj: {{userDetails}}
+			</div>
+			<div>
+				Temp Obj: {{temp}}
+			</div>
+			RESULT IS: {{result}}
+
+			<div>
+				Student Details {{stdDetails}}
+			</div>
+		</div>
+
+
+		<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>

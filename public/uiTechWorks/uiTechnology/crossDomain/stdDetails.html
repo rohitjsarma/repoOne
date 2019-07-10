@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>testingCrossDomain</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<input type="button" name="" value="Get Data" onclick="getData()">
+	<script type="text/javascript">
+		function getData() {
+			$.ajax({
+				url:"http://localhost:8081/getStudentDetails/student",
+				datatype:"JSON",
+				method:"get",
+				success: function(res) {
+						console.log("success");
+						console.log(res);
+					},
+					error: function(err) {
+						console.log("error");
+						console.log(err);
+					}
+			})
+		}
+	</script>
+
+</body>
+</html>

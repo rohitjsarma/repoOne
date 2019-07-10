@@ -1,0 +1,13 @@
+<div class="prodDetails">
+	<div style="text-align:right;" class="link" ng-click="showLogin()">
+		Logout
+	</div>
+	<div>
+		<ul >
+			<li ng-repeat="item in prodDetails">
+				<div>Product Name: {{item.name}}</div>
+				<div>Product Price: {{item.price}}</div>
+			</li>
+		</ul>
+	</div>
+</div>

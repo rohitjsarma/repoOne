@@ -1,0 +1,20 @@
+<div >
+	<ul>
+		<li>
+			Enter user id : <input type="text" ng-model="uname">
+		</li>
+		<li>
+			Enter account PWD : <input type="password" ng-model="upwd">
+		</li>
+		<li>
+			<div class="link" ng-click="showPage('fg')">Forgot password?</div>
+			<div class="link"  ng-click="showPage('reg')">New Registration</div>
+		</li>
+		<li>
+			<input type="button" value="Signin" ng-click="showProdDetails()">
+		</li>
+		<li class="invalid" ng-show="isInvalid">
+			Invalid credentials
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,25 @@
+.block {
+	background: #ccc;
+	margin: 5px;
+	padding: 10px;
+	width: 100%;
+	float: left;
+}
+
+.loadingBlock {
+	display: none;
+			}
+.loadingBlock img {
+	width: 150px;
+	height: 120px;
+	position: absolute;
+	top: 30%;
+	left: 40%;
+				
+			}
+.errBlock {
+	color: red;
+	margin: 100px;
+	text-align: center;
+	font-size: 25px;
+	display: none;

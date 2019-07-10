@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>
+			Demonstrating functions with parameters
+		</title>
+	</head>
+	<body>
+		<div>Demonstrating functions with params/arguments</div>
+		<script type="text/javascript">
+			
+			function readValues() {
+				var firstval = prompt("Enter First value");
+				var secondval = prompt("Enter Second value");
+				firstval = parseInt(firstval);
+				secondval = parseInt(secondval);
+				addValues(firstval, secondval);
+			}
+			function addValues(firstval, b) {
+				var result = 0 ;
+				result = firstval + b;
+				console.log("The sum is " + result);
+			}
+			readValues();
+		</script>
+	</body>
+</html>

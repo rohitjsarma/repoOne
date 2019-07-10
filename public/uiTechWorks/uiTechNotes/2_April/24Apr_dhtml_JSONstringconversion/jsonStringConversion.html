@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>
+			Demonstrating converting obj to string and viceversa.
+		</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var details = {
+				name: 'raj',
+				age: 40,
+				gender: 'Male',
+				personal: {
+				married: 'NO',
+				dob: '12/12/2017'
+				}
+			};
+            console.log(details.name);
+			console.log(details);
+			var strObj = JSON.stringify(details);
+			console.log(strObj);
+			console.log(JSON.parse(strObj));
+		</script>
+
+	</body>
+</html>

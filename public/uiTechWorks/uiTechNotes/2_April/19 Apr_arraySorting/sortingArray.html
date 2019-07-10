@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript" >
+			var a = [21, 121 ,30, 4, 23, 12, 11, 87, 32, 300, 200];
+			console.log(a);
+			var temp;
+			for (var i = 0; i < a.length; i++) {
+				for (var j = i+1; j < a.length; j++) {
+					if (a[i] > a[j]) {
+						temp = a[i];
+						a[i] = a[j];
+						a[j] = temp;
+					}
+				}
+			}
+			console.log(a);
+		</script>
+
+	</body>
+</html>h

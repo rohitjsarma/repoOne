@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Classes in JS
+		</title>
+	</head>
+	<body>
+		<div>Demonstrating JS Classes</div>
+		<script type="text/javascript">
+
+			function studentDetails(obj) {
+				this.name = obj.name;
+				this.age = obj.age;
+				this.gender = obj.gender;
+				this.marks = obj.marks;
+				this.displayData = function() {
+					this.getTotalAndAvg()
+					this.getGrade();
+					console.log("Name is " + this.name);
+					console.log("Age is " + this.age);
+					console.log("total is " + this.total);
+					console.log("Avg is " + this.avg);
+				};
+				this.getTotalAndAvg = function() {
+					this.total = 0;
+					for (var i = 0; i < this.marks.length; i++) {
+						this.total += this.marks[i];
+					}
+					this.avg = this.total/this.marks.length;
+				};
+				this.getGrade = function() {
+					if (this.avg > 50) {
+						console.log("Passed");
+					} else {
+						console.log("Failed");
+					}
+				};
+			}
+			var std1 = new studentDetails({name:'prasad', age: 50, gender:'male', marks:[23, 44, 55]});
+			std1.displayData();
+
+
+			var std2 = new studentDetails({name:'Teena', age: 20, gender:'female'
+
+				, marks:[30, 99, 55]});
+
+			std2.displayData();
+
+
+
+		</script>
+	</body>
+</html>

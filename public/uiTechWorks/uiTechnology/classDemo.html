@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		   <title>
+				Demonstrating Class
+			</title>
+			<style type="text/css">
+				.container{
+					border: 2px solid green;
+					background-color: #ccc;
+					margin: 5px;
+					padding: 5px;
+				}
+				ul,li{
+					text-decoration: none;
+					list-style: none;
+					margin: 5px;
+					padding: 5px;
+				}
+			</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1 style="text-align: center;text-decoration: underline;" ><cite>ABC International</cite></h1>
+			<h2 style="color: blue;text-align: center;border: 2px solid red">Student Registration</h2>
+			<ul>
+				<li>Name :<input type="text" name="fname" id="sName"></li>
+				<li>Age &nbsp&nbsp :<input type="text" name="age" id="sAge"></li>
+				<li>Gender :<input type="radio" name="gender" value="Male" id="sGen">Male
+				<input type="radio" name="gender" value="Female" id="sGen" id="sGen">Female</li>
+				
+				<li>Select Course :
+					<select id="sCrs">
+						<option>java</option>
+						<option>Angular</option>
+						<option>Php</option>
+					</select>
+				</li>
+		<li><input type="button" name="save" value="save" onclick="readUserDetails()"></li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			function studentDetails(obj) {
+				//var stdDetails={}
+			
+				this.fname =obj.fname;
+				this.age=obj.age;
+				this.gender=obj.gender;
+				this.course=obj.course;
+				this.display=function(){
+					console.log("Student name is   : " +this.fname);
+					console.log("Student age is    : " +this.age);
+					console.log("Student gender is : " +this.gender);
+					console.log("Student course is : " +this.course);
+				}
+					
+			}			
+			
+			function readUserDetails(obj){
+				var fname=document.querySelector('#sName').value;
+				var age  = document.querySelector('#sAge').value;
+				var gender=document.querySelector('#sGen').value;
+				var course=document.querySelector('#sCrs').value;
+
+			}
+            
+				var sDetails= new studentDetails(); 
+			       sDetails.display(obj);
+
+		
+
+		</script>
+
+	</body>
+</html>

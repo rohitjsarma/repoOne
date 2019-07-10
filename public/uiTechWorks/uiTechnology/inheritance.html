@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>inheritanceConceptStaticAndDynamicObject</title>
+	<script type="text/javascript">
+
+	</script>
+	<style type="text/css">
+		li{
+			list-style: none;
+			margin: 5px;
+			padding: 5px;
+		}
+		ul{
+			border: 2px solid orange;
+			padding: 5px;
+			margin: 5px;
+		}
+		input[type=text]{
+			width: 15em;
+		}
+		.title{
+			text-align: center;
+			border: 2px solid green;
+			background-color: #ccc;
+			margin: 5px;
+		}
+		.srb{
+			text-align: center;
+			border: 2px solid blue;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div  style="border: 2px solid" >
+	<div class="title"><b>ABC_International_School</b></div>
+
+	<ul>
+		<div class="srb"><cite>Student Registration Block</cite></div>
+		<li>Name :<br><input type="text" name="Name" id="sName"></li>
+		<li>Age :<br><input type="text" name="Age" id="sAge"></li>
+		<li>Select Country: 
+			<select id="sCountry">
+				<option>India</option>
+				<option>Canada</option>
+				<option>USA</option>
+			</select>
+		</li>
+		<li><input type="button" value="Save Details" onclick="readUserDetails()"></li>
+	</ul>
+	</div>
+	<script type="text/javascript">
+		var schoolDetails={
+			schoolName:" ABC_International",
+			schoolLocation:"Hyderabad",
+			esdt:2005,
+		}
+		function readUserDetails() {
+			var sDetails = Object.create(schoolDetails);
+			sDetails.sname=document.querySelector("#sName").value;
+			sDetails.sage=document.querySelector("#sAge").value;
+			sDetails.scountry=document.querySelector("#sCountry").value;
+			sDetails.displayData=function(){
+				    console.log("Student name is  :" + this.sname);
+					console.log("Student Age is   :" + this.sage);
+					console.log("Student Country  :" + this.scountry);
+					console.log("School Name      :" + this.schoolName);
+					console.log("School Location  :" + this.schoolLocation);
+			}
+			sDetails.displayData();
+		}
+	</script>
+
+</body>
+</html>
+
+
+
+

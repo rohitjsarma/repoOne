@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>secondLargestNum</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var a =[20,20,25,30,40,50,95,105];
+			var first = a[0]
+			var second = a[0];
+			for (var i = 0; i< a.length; i++) {
+			   
+			   if(a[i]>first){
+			   	second=first;
+			   	first=a[i];
+
+			   }
+			}
+           /*    var n = a.length;
+			     a.sort();
+				 a.reverse();
+			console.log("secondLargestNum is " +a[n-1]);
+			console.log("secondLargestNum is " +a);*/
+
+			console.log("first largest num " +first);
+			console.log("secondLargestNum " +second);
+		</script>
+
+	</body>
+</html>

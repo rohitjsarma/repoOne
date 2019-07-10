@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>testingElements</title>
+	</head>
+	<body>
+		<div class="block">
+			<p>The <abbr id="myAbbr" title="World Health Organization">WHO</abbr> was founded in 1948</p>
+			<button id="bid" onclick="myFunction()">click Here</button>
+			<P id='demo'></P>
+			<div id="myP"></div>
+			<div id="mydiv"></div>
+			<ul id="ulid">
+				<li>College</li>
+				<li>Tea</li>
+
+			</ul>
+			<button onclick="myFunction1()">click1</button>
+			<button onclick="myFunction2()">click2</button>
+			<button onclick="myFunction3()">click3</button>
+		</div>
+		<script type="text/javascript">
+			function myFunction() {
+				var x= document.getElementById('myAbbr').title;
+				document.getElementById('demo').innerHTML=x;
+			}
+			function myFunction1(argument) {
+				
+				var x = document.createElement('li');
+				var y = document.createTextNode('water');
+				x.appendChild(y);
+				document.getElementById('ulid').appendChild(x);
+
+			}
+			function myFunction2() {
+			    var x = document.createElement("ABBR");
+			    var t = document.createTextNode("WHO");
+			    x.setAttribute("title", "World Health Organization");
+			    x.appendChild(t);
+			    document.getElementById("myP").appendChild(x);
+			}
+			function myFunction3(argument) {
+				var x= document.createElement('cite');
+				var y = document.createTextNode("WHO-World Health Organization ");
+				x.appendChild(y);
+				document.getElementById('mydiv').appendChild(x);
+		    }
+
+
+			
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Jquery Effects show/hide
+		</title>
+		<script type="text/javascript" src="../../../../jQuery/jquery.js"></script>
+		<style type="text/css">
+			.block {
+				width: 200px;
+				height: 200px;
+				border: 2px solid;
+				text-align: center;
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<input type="button" value="Slide up" onclick="addEffect('up')">
+			<input type="button" value="Slide Down" onclick="addEffect('down')">
+			<input type="button" value="Toggle Slide" onclick="addEffect('tog')">
+		</div>
+		<div class="block">
+			Content
+		</div>
+		<script type="text/javascript">
+			function addEffect(type) {
+				switch(type) {
+					case 'up':
+						$(".block").slideUp(5000, function(){
+						});
+						break;
+					case 'down':
+						$(".block").slideDown(5000);
+						break;
+					case 'tog':
+						$(".block").slideToggle(500);
+						break;
+				}
+			}
+		</script>
+	</body>
+</html>
+

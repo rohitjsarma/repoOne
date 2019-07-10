@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		   <title>
+				Demonstrating Class
+			</title>
+			<style type="text/css">
+				.container{
+					border: 2px solid green;
+					background-color: #ccc;
+					margin: 5px;
+					padding: 5px;
+				}
+				ul,li{
+					text-decoration: none;
+					list-style: none;
+					margin: 5px;
+					padding: 5px;
+				}
+			</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1 style="text-align: center;text-decoration: underline;" ><cite>ABC International</cite></h1>
+			<h2 style="color: blue;text-align: center;border: 2px solid red">Student Registration</h2>
+			<ul>
+				<li>Name :<input type="text" name="fname" id="sName"></li>
+				<li>Age &nbsp&nbsp :<input type="text" name="age" id="sAge"></li>
+				<li>Select Course :
+					<select>
+						<option>java</option>
+						<option>Angular</option>
+						<option>Php</option>
+					</select>
+				</li>
+				<li><input type="button" name="save" id="svbtn1" value="save" onclick="fun1()"></li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var schoolDetails= {
+				schoolNmae:"ABC International",
+				schLocation:"Hyderabad",
+				pin:500016,
+			}
+
+		</script>
+
+	</body>
+</html>

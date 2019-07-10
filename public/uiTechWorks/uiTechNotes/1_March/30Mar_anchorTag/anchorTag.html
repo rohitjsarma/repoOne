@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<title>
+			Demonstrating anchor tag
+		</title>
+		<style type="text/css">
+			a {
+				text-decoration: none;
+				color: green;
+			}
+			a:hover {
+				text-decoration: underline;
+			} 
+			a:focus {
+				background: yellow;
+			}
+			a:active {
+				background: red;
+			}
+			span:nth-child(5) {
+				background: yellow;
+			}
+			/*.content:hover {
+				background: green;
+				color: blue;
+			} */
+			
+			.newsContent::first-letter {
+				font-size: 40px;
+				background: yellow;
+			}
+			.newsContent::first-line {
+				
+				background: yellow;
+				color: red;
+			}
+			.newsContent::before{
+				background: orange;
+				font-size: 25px;
+				text-decoration: underline;
+				content: " start reading ";
+			}
+			.newsContent::after {
+				content: "Continue  reading ....";
+				color: yellow;
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+		
+
+
+		the below code is to demonstrate pseudo classes dn elements.
+		please click on this link to visit google page.-->
+
+		
+		
+		<a href="http://www.google.com" target="_blank" style="color: magenta;text-decoration:underline; ">
+			Sample
+		</a>
+
+		<div class="content1">
+			Hello all
+			<span>1.item1</span>
+			<span>2.item1</span>
+			<span>3.item1</span>
+			<span>4.item1</span>
+			<span>5.item1</span>
+		</div>
+		
+		<h2>News Item 1</h2>
+		<div class="newsContent">
+			This is the news about the news been happend in hyd last night This is the news about the news been happend in hyd last night This is the news about the news been happend in hyd last night This is the news about the news been happend in hyd last night This is the news about the news been happend in hyd last night This is the news aboutthe news been happend in hyd last night
+			This is the news about the news been happend in hyd last night
+		</div>
+		<h2>News Item 2</h2>
+		<div class="newsContent">
+			This is the news about the news been happend in hyd last night
+		</div>
+		<h2>News Item 3</h2>
+		<div class="newsContent">
+			This is the news about the news been happend in hyd last night
+		</div>
+	</body>
+</html>

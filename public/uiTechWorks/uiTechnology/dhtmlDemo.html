@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>dhtmlDemo</title>
+	</head>
+	<style type="text/css">
+	.sample {
+				border: 5px solid blue;
+				height: 100px;
+				width: 100px;	
+			}
+	.block1{
+				border: 10px solid red ;
+			}
+
+		
+	</style>
+	<body>
+		<div id="container"></div>
+		<script type="text/javascript">
+
+			var sum = 40+50;
+			var spanElement = document.createElement("span");
+			var citeElement = document.createElement("b");
+			spanElement.innerText= "the sum of two no is "+sum;
+			spanElement.style.background = "hotpink";
+			spanElement.setAttribute("class", "sample");
+			spanElement.setAttribute("id", "test");
+			document.querySelector("#container").appendChild(spanElement);
+			document.querySelector(".sample").appendChild(citeElement);
+			var divElement = document.createElement("cite");
+			document.querySelector("#container").appendChild(divElement);
+			divElement.innerText = "hello there i am cite.";
+			divElement.style.background= "yellow";
+			divElement.setAttribute("class","block1");
+			divElement.setAttribute("id","test1");
+			function myFunction() {
+				 document.getElementById("test1").innerHTML = "Hello World";
+			}
+			
+		</script><br>
+				<button onclick="myFunction()">Try it</button><br>
+			
+
+	</body>
+</html>

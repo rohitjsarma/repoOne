@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JSON_ObjectAndForIn</title>
+	</head>
+	<body>
+	   <script type="text/javascript">
+	   	var studentDetail={
+	   		name:"rohit",
+	   		age:40,
+	   		'gender':"male", //in js keys are treated as string ,so ""  is optional for keys!
+	   		marks:[20,30,40,50,50],
+	   		total:0
+	   	}
+	   	console.log(studentDetail.marks[2]);
+	   	console.log("student name is "   +studentDetail.name);
+	   	console.log("student name is "   +studentDetail['name']);
+	   	console.log("student age is "    +studentDetail.age);
+	   	for (var i = 0; i <studentDetail.marks.length; i++) {
+	   		
+	   		studentDetail.total += studentDetail["marks"][i];
+	   	}
+		   	console.log("student gender is "  +studentDetail.total);
+		   	console.log("example of <for in> control structuregiven below");
+		   	for(var temp in studentDetail){
+	   		console.log(temp);
+	   		console.log(studentDetail[temp]);
+	   	}
+	   	
+	   </script>
+
+	</body>
+</html>

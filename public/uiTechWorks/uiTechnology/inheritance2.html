@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>inheritanceWithStaticAndDynamicObject</title>
+	
+</head>
+<style type="text/css">
+	.container{
+		border: 2px solid red;
+		background-color: #ccc;
+		margin: 5px;
+		padding: 5px;
+	}
+</style>
+<body>
+	<div class="container">
+		<h1 style="border: 1px solid orange;text-align: center;text-decoration: underline;background-color: yellow">Product Details</h1>
+	Product Name :<input type="text" name="name" id="pName"><br><br/>
+	Product Price  :<input type="text" name="age" id="pPrice"><br>
+	<br/>
+	<input type="button" name="save" value="save" id="svbtn" onclick="fun1()">
+</div>
+	<script type="text/javascript">
+			var sellerDetails={
+				Manufacture:'Indian Electronics',
+				manLocation:"hyderabad",
+				rating:"4/5",
+			}
+			function fun1() {
+				var prodDetails=Object.create(sellerDetails);
+					prodDetails.pName =document.querySelector('#pName').value;
+					prodDetails.price =document.querySelector('#pPrice').value;
+					prodDetails.save  =document.querySelector('#svbtn').value;
+		      prodDetails.Display=function () {
+                  console.log("Product Details");
+                  console.log("Product name : " +productDetails.pName);
+                  console.log("Product Price: " +this.price);
+                  console.log("sellerDetails");
+                  console.log("Manufacture name     :" +this.Manufacture);
+                  console.log("Manufacture location :" +this.manLocation);
+                  console.log("Manufacture Rating   :" +this.rating);
+			}
+			prodDetails.Display();
+		};
+			
+
+			
+		</script>
+
+
+
+	
+</body>
+</html>

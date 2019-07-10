@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>functionWithReturnValue</title>
+	</head>
+	<body>
+		<script type="text/javascript">	
+			function addValues(a1,a2) {
+				var result = a1+a2;
+				return result;
+				
+			}
+			function readValues() {
+				    var firstVal;
+					var secondVal;
+					
+					firstVal=  prompt("enter the first Val");
+				    secondVal=  prompt("enter the second Val");
+					firstVal =parseInt(firstVal);
+					secondVal= parseInt(secondVal);
+					var result = addValues(firstVal,secondVal);
+				    console.log("result is " +result);	
+			  
+			}
+			  readValues();
+         
+		</script>
+
+	</body>
+</html>

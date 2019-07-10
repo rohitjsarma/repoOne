@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>inheritanceConceptsWithTwoStaticObject</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+
+			var sellerDetails={
+
+				SellerName:'Indian Electronics',
+				sellerLocation:'Hyderabad',
+				SellerrRating:'*****',
+			}
+			var productDetails={
+				prodName:"LAPTOP",
+				price:'300$',
+				manifacturer:"Samsung",
+				image:"images/samsung.jpg",
+				displayDetails:function(){
+				      console.log("Product name : " +this.prodName);
+				      console.log("Product price:" +this.price);
+				      console.log("Product manifacturer : " +this.manifacturer);
+				      console.log("Product image:" +this.image);
+				      console.log("Seller Information");
+				      console.log("Product Seller Name:" +this.SellerName);
+				      console.log("Product Seller location : " +this.sellerLocation);
+				      console.log("Product Rating:" +this.SellerrRating);
+
+
+				}
+			};
+			productDetails.__proto__=sellerDetails;
+			productDetails.displayDetails();
+		</script>
+
+	</body>
+</html>

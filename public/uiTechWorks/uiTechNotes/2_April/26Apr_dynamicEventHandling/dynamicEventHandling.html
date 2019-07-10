@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>
+			Demonstrating Dynamic Event handling, Event Bubbling and Capturing
+		</title>
+		<style type="text/css">
+			.parent {
+				border: 2px solid;
+				background:green;
+				text-align: center;
+				width: 400px;
+				height: 240px
+			}
+			.child {
+				border: 2px solid;
+				background: red;
+				width: 200px;
+				height: 120px;
+				margin: 10px auto;
+
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div>
+			Select Which button: <select onchange="setEvent()" id="userOption">
+				<option>BTN1</option>
+				<option>BTN2</option>
+			</select>
+		</div>
+		<input type="button" value="SAMPLE" id="msgBtn1">
+		<input type="button" value="SAMPLE" id="msgBtn2">
+		<div class="parent">
+			PARENT BLOCK
+			<div class="child">
+				CHILD BLOCK
+			</div>
+		</div>
+		<script type="text/javascript">
+			
+			function setEvent() {
+				var userOption = document.querySelector("#userOption").value;
+				if (userOption == 'BTN1') {
+					document.querySelector("#msgBtn1").addEventListener("click", function(){
+						console.log("HELLO");
+					});
+				} else {
+					document.querySelector("#msgBtn2").addEventListener("click", function(){
+						console.log("HELLO");
+					});
+				}
+			}
+			
+
+			document.querySelector(".parent").addEventListener("click", function(){
+				console.log("PARENT EVENT FIRED");
+			}, true);
+
+			document.querySelector(".child").addEventListener("click", function(){
+				console.log("CHILD EVENT FIRED");
+			}, true);
+		</script>
+	</body>
+</html>
